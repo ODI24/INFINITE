@@ -1,0 +1,1177 @@
+																																			--[[
+																																				
+			                  __/\\\\____________/\\\\_________________________________________________________        
+							   _\/\\\\\\________/\\\\\\_________________________________________________________       
+			                    _\/\\\//\\\____/\\\//\\\_________________________________________________________      
+			                     _\/\\\\///\\\/\\\/_\/\\\_____/\\\\\_____/\\/\\\\\\\___/\\\\\\\\\\_____/\\\\\\\\__     
+			                      _\/\\\__\///\\\/___\/\\\___/\\\///\\\__\/\\\/////\\\_\/\\\//////____/\\\/////\\\_    
+			                       _\/\\\____\///_____\/\\\__/\\\__\//\\\_\/\\\___\///__\/\\\\\\\\\\__/\\\\\\\\\\\__   
+			                        _\/\\\_____________\/\\\_\//\\\__/\\\__\/\\\_________\////////\\\_\//\\///////___  
+			                         _\/\\\_____________\/\\\__\///\\\\\/___\/\\\__________/\\\\\\\\\\__\//\\\\\\\\\\_ 
+			                          _\///______________\///_____\/////_____\///__________\//////////____\//////////__
+										[A1.exe#1168]
+									      									
+									      									 FIRST PERSON SHOOTERS
+                                                                            ------------------------
+																				-: CHANGELOG :-
+																			------------------------
+																				3.3:
+																					- Got lazy and stopped keeping track of versions
+																					- Brought back Chams and fixed old issues 
+																					- Removed WallHack
+																					- Fixed ESP issues
+																					- Completely rewrote aimbot to use mouse dragging
+																					- Fixed an issue with looking opposite of the target
+
+																			------------------------
+																				   -: NOTES :-
+																			------------------------
+																				- This script relies heavily on Synapse's anti CoreGui detection methods.
+																				- Use at your own risk.
+																				- This script is laggy on some games... It is what it is.
+																				- Games with custom drag implementations kinda screw this script
+			
+																				Esp:
+																					- This is pretty much safe.
+																				Chams:
+																					- This is pretty much safe.
+																				Aimbot:
+																					- This is pretty much safe, as it
+																					relies entirely on dragging the mouse.
+																					- Works better on lower sensitivities
+																					- Players within the PriorityRange (75 studs)
+																					are targeted by who's closest.
+																					- Increase depth to search workspace
+																					further. Some games hide NPCs deeper in folders.
+																				Fullbright:
+																					- Messes with stuff, might get you banned.
+																				Floaty:
+																					- Messes with stuff, might get you banned.
+
+																			------------------------
+																				 -: CONTROLS :-
+																			------------------------
+																				Menu:
+																					Delete - Toggle
+																				
+																				Chams:
+																					Click [Toggle] to cycle colors
+
+																				Aimbot:
+																					H - Toggle
+																					U - Up
+																					J - Down
+
+																				Floaty:
+																					N - Still
+																					B - Up
+																					M - Down
+
+
+																																			--]]
+																																																																	
+local Run = game:GetService('RunService');
+local World = game:GetService('Workspace');
+local Input = game:GetService('UserInputService');
+local Lighting = game:GetService("Lighting");
+local Players = game:GetService('Players');
+local Player = Players['LocalPlayer'];
+local GameSettings = UserSettings():GetService("UserGameSettings")
+
+local Keys = {}
+local Misc = {
+	CharFunctions 	= getmetatable(newproxy(true));
+	GUIColors 			= {
+		Enabled 			= Color3.fromRGB(46, 105, 132);
+		Disabled 			= Color3.new(.38, .38, .38);
+	};
+	
+	ChamsColors = {
+		{'White', 	Color3.new(1, 1, 1)};
+		{'Black', 	Color3.new(0, 0, 0)};
+		{'Red', 	Color3.new(1, 0, 0)};
+		{'Green', 	Color3.new(0, 1, 0)};
+		{'Blue', 	Color3.new(0, 0, 1)};
+		{'Purple', 	Color3.new(0.65, 0, 0.65)};
+		{'Yellow',  Color3.new(1, 1, 0)};
+		{'Grey', 	Color3.new(0.8, 0.8, 0.8)};
+	}
+}
+
+local function GetFunc(tab, name)
+	for funcName, func in next, (tab) do
+		if string.lower(name):match(funcName:lower()) then
+			return func, funcName
+		end
+	end
+end
+
+local function GetColor(tab, name)
+	for index, colortab in next, (tab) do
+		if (colortab[1] == name) then
+			return colortab, index
+		elseif (colortab[2] == name) then
+			return colortab, index
+		end
+	end
+end
+
+local Settings = {
+	{'Menu', false, Enum.KeyCode.Delete},
+	{'Team Chams [\'COLOR\']', true, 'Toggle'},
+	{'Enemy Chams [\'COLOR\']', true, 'Toggle'},
+	{'Chams Transparency', false, '0'},
+	{'Fullbright', true, 'MAX'},
+	{'Floaty', true, 'Still'},
+	{'Aimbot', true, '<-'},
+	{'ESP', true, '<-'},
+	{'Written by: A1.exe#1168', false, 'Discord'}
+}
+
+------------ [[ GUI SPAWN ]] ------------
+FormAssets = function()
+	------ ERROR MAGIC ------
+	local __ERROR__ = Instance.new('BindableEvent')
+	__ERROR__['Event']:Connect(error)
+	
+	--------- CREATE FUNCTION ---------
+	local create = function(class, parent) 
+		local instance = Instance.new(class);
+		return function(props)
+			for property, value in next, (props) do
+				if (property ~= 'Parent') and (typeof(value) ~= 'Instance') then
+					local suc, err = pcall(function()
+						instance[property] = value
+					end)
+					if not suc then __ERROR__:Fire('[Script->Asset]: ' .. err) end
+					
+				elseif (property == 'Parent') then
+					parent = value
+				end
+			end
+			
+			if parent and (typeof(parent) == 'Instance') then
+				instance['Parent'] = parent
+			end
+			
+			return instance
+		end
+	end
+	
+	-------------------------------------
+	-------------------------------------
+	-- SOME THINGS MAY BE OUT OF ORDER --
+	----(INSTANCE RELATED PROPERTIES)----
+	-------------(UNLIKELY)--------------
+	-------------------------------------
+	-------------------------------------
+
+	local Main = create('ScreenGui'){
+		Name = "FPS Hacks - Menu"
+	}
+
+	local Folder = create('Folder', Main){
+		Name = 'Chams'
+	}
+
+	local Folder1 = create('Folder', Folder){
+		Name = 'Team'
+	}
+	
+	local Folder2 = create('Folder', Folder){
+		Name = 'Enemy'
+	}
+	
+	local Folder3 = create('Folder', Main){
+		Name = 'ESP'
+	}
+	
+	local Frame = create('Frame', Main){
+		Name 					= "Main";
+		BackgroundColor3		= Color3.new(1, 1, 1);
+		BackgroundTransparency 	= 1;
+		Position 				= UDim2.new(0.5, 0, 0.5, 0);
+		Size 					= UDim2.new(0, 250, 0, 190);
+		Draggable				= true;
+		Active 					= true;
+		AnchorPoint 			= Vector2.new(0.5, 0.5);
+		Transparency 			= 1
+	}
+	
+	local TextLabel = create('TextLabel', Frame){
+		Name 					= "Title";
+		BackgroundColor3		= Color3.new(0.180392, 0.411765, 0.517647);
+		BorderSizePixel			= 0;
+		Size 					= UDim2.new(1, 0, 0, 35);
+		Text 					= "FPS Hacks v3.0";
+		TextColor3 				= Color3.new(0.866667, 0.843137, 0.843137);
+		Font 					= Enum.Font.SciFi;
+		FontSize 				= Enum.FontSize.Size28;
+		TextWrapped				= true
+	}
+	
+	local ScrollingFrame = create('ScrollingFrame', Frame){
+		Name 					= "Buttons";
+		BackgroundColor3		= Color3.new(1, 1, 1);
+		BackgroundTransparency	= 1;
+		BorderSizePixel			= 0;
+		Position 				= UDim2.new(0.5, 0, 0, 40);
+		CanvasSize 				= UDim2.new(0, 0, 0, 0);
+		Size 					= UDim2.new(1, 0, 0, 260);
+		AnchorPoint				= Vector2.new(0.5, 0);
+		Transparency 			= 1
+	}
+	
+	local Frame1 = create('Frame'){
+		BackgroundColor3		= Color3.new(1, 1, 1);
+		BackgroundTransparency	= 1;
+		BorderSizePixel			= 0;
+		Position 				= UDim2.new(0, 0, 0, 1);
+		Selectable 				= true;
+		Size 					= UDim2.new(1, 0, 0, 25);
+		ClipsDescendants		= true;
+		Transparency 			= 1
+	}
+	
+	local TextLabel1 = create('TextButton', Frame1){
+		Name 					= "Text";
+		BackgroundColor3		= Color3.new(1, 1, 1);
+		BorderColor3			= Color3.new(0.180392, 0.411765, 0.517647);
+		Position 				= UDim2.new(0.100000001, 0, 0, 0);
+		Size 					= UDim2.new(0.600000024, 0, 1, 0);
+		Text 					= "Example";
+		TextColor3 				= Color3.new(0.180392, 0.411765, 0.517647);
+		Font 					= Enum.Font.SciFi;
+		FontSize 				= Enum.FontSize.Size14
+	}
+	
+	local Frame2 = create('Frame', Frame1){
+		Name 					= "Status";
+		BackgroundColor3		= Color3.new(0, 1, 0);
+		BorderSizePixel			= 0;
+		Position 				= UDim2.new(0.0250000004, 0, 0.5, 0);
+		Size 					= UDim2.new(0, 7, 0, 7);
+		Style 					= Enum.FrameStyle.DropShadow;
+		AnchorPoint				= Vector2.new(0, 0.5)
+	}
+	
+	local TextButton = create('TextButton', Frame1){
+		Name 					= "Key";
+		BackgroundColor3		= Color3.new(0.180392, 0.411765, 0.517647);
+		BackgroundTransparency	= 0.5;
+		BorderSizePixel			= 0;
+		Position 				= UDim2.new(0.699999988, 0, 0, 0);
+		Size 					= UDim2.new(0.300000012, 0, 1, 0);
+		Text 					= "[EXAMPLE]";
+		TextColor3 				= Color3.new(0.839216, 0.839216, 0.839216);
+		Font 					= Enum.Font.SciFi;
+		FontSize 				= Enum.FontSize.Size14;
+		TextStrokeColor3		= Color3.new(0.380392, 0.380392, 0.380392);
+		TextStrokeTransparency	= 0;
+		Transparency 			= 0.5
+	}
+	
+	local UIListLayout = create('UIListLayout', ScrollingFrame){
+		Padding 				= UDim.new(0, 4);
+		HorizontalAlignment 	= Enum.HorizontalAlignment.Center
+	}
+	
+	local UIPadding = create('UIPadding', ScrollingFrame){}
+
+	local ESP_GUI = create('BillboardGui'){
+		Active 					= true;
+		AlwaysOnTop				= true;
+		StudsOffsetWorldSpace	= Vector3.new(0, 4, 0);
+		Size 					= UDim2.new(0, 100, 0, 50)
+	}
+	
+	create('TextLabel', ESP_GUI){
+		Name 					= "Target";
+		BackgroundColor3		= Color3.new(1, 1, 1);
+		BackgroundTransparency	= 1;
+		BorderSizePixel			= 0;
+		Size 					= UDim2.new(1, 0, 0, 20);
+		Text 					= "";
+		TextColor3 				= Color3.new(1, 0, 0);
+		Font 					= Enum.Font.Garamond;
+		FontSize 				= Enum.FontSize.Size14;
+		TextScaled 				= true;
+		TextStrokeTransparency	= 0.20000000298023;
+		TextWrapped				= true
+	}
+	
+	create('TextLabel', ESP_GUI){
+		Name 					= "Dist";
+		BackgroundColor3		= Color3.new(1, 1, 1);
+		BackgroundTransparency	= 1;
+		Position 				= UDim2.new(0, 0, 0.349999994, 0);
+		Size 					= UDim2.new(1, 0, 0, 20);
+		Text 					= "";
+		TextColor3 				= Color3.new(1, 0, 0.498039);
+		Font 					= Enum.Font.Garamond;
+		FontSize 				= Enum.FontSize.Size12;
+		TextScaled 				= true;
+		TextStrokeTransparency	= 0.20000000298023;
+		TextWrapped				= true
+	}
+	
+	
+	local Float = function()
+		return create('Part'){
+			Name = 'DELETABLE';
+			Parent = workspace;
+			Locked = true;
+			BrickColor = BrickColor.new(1003);
+			Size = Vector3.new(6, 1.8, 6);
+			Transparency = 1;
+			Material = "Slate";
+			CanCollide = false;
+			Anchored = true
+		}
+	end
+	
+	return create, Main, Frame1, Folder, Folder3, ESP_GUI, Float
+end
+
+local Create, Menu, Button, Chams, ESPF, Billboard, Float = FormAssets()
+
+local Functions;
+Functions = {
+	['Menu'] 		= function()
+		Menu['Enabled'] = not (Menu['Enabled']);
+	end;
+	
+	['Floaty'] = function(change)
+		local FloatySettings = Settings.Floaty
+		if not Floaty then Floaty = Float() end
+		
+		if (change:lower() == 'toggle') then
+			FloatySettings.Enabled = not FloatySettings.Enabled
+		end
+		
+		if (change:lower() == 'up') then
+			FloatySettings.Height = 2
+			FloatySettings.UI.Key.Text = '[UP]'
+			return
+		elseif (change:lower() == 'still') then
+			FloatySettings.Height = 3.9
+			FloatySettings.UI.Key.Text = '[STILL]'
+			return
+		elseif (change:lower() == 'down') then
+			FloatySettings.Height = 6
+			FloatySettings.UI.Key.Text = '[DOWN]' 
+			return
+		end			
+				
+		if FloatySettings.Enabled then
+			Floaty.CanCollide = true
+
+			spawn(function()
+				while FloatySettings.Enabled and wait() and Floaty do
+					local Char = Player.Character or Player.CharacterAdded:wait()
+					local HRP = Char and Char:FindFirstChild('HumanoidRootPart')
+					
+					if HRP then
+						Floaty.CFrame = CFrame.new(HRP.CFrame.x, HRP.CFrame.y - FloatySettings.Height, HRP.CFrame.z)
+					end
+				end
+
+				if Foaty then
+					Floaty.CanCollide = false
+				end
+			end)
+		elseif Floaty then
+			Floaty.CanCollide = false
+		end
+	end;
+
+	['ESP'] = function()
+		local ESPSettings = Settings.ESP
+
+		ESPSettings.Enabled = not ESPSettings.Enabled
+
+		if ESPSettings.Enabled then
+			Misc['CharFunctions']
+			['ESP'] = function(char)
+				local Target = Players:GetPlayerFromCharacter(char)
+				local HRP = char:FindFirstChild('HumanoidRootPart')
+				if not Target or (Target == Player) or not HRP then return end 
+				
+				local Folder = ESPF:FindFirstChild(Target['Name'])
+					or Create('Folder', ESPF){Name = Target['Name']}
+					
+				local Bill = Billboard:Clone()
+				Bill.Target.Text 		= Target['Name']
+				Bill.Target.TextColor3 	= Target.TeamColor.Color
+				Bill.Adornee 			= HRP
+				Bill.Parent 			= Folder
+				
+				local Connection = Target:GetPropertyChangedSignal("Team"):Connect(function()
+					Bill.Target.TextColor3 	= Target.TeamColor.Color
+				end)
+
+				spawn(function()
+					while HRP and wait() and ESPSettings.Enabled do
+						local CHRP = (Player.Character or Player.CharacterAdded:wait()):FindFirstChild('HumanoidRootPart')
+						if CHRP then
+							Bill.Dist.Text = math.floor((HRP.Position - CHRP.Position).magnitude)
+						end
+					end
+
+					Connection:Disconnect()
+				end)
+			end
+		elseif Misc['CharFunctions']['ESP'] then
+			Misc['CharFunctions']['ESP'] = nil
+			ESPF:ClearAllChildren()
+		end
+	end,
+
+	['Team Chams'] = function()
+		local ChamSettings = Settings.Chams
+		if ChamSettings.Busy then return end
+		ChamSettings.Busy = true
+
+		local TeamSettings = ChamSettings.Team
+		TeamSettings.Enabled = not TeamSettings.Enabled
+
+		if TeamSettings.Enabled then
+			Misc['CharFunctions']
+			['TeamChams'] = function(char)
+				local Target = Players:GetPlayerFromCharacter(char)
+				if (Target == Player) or (Target.TeamColor ~= Player.TeamColor) then return end
+				
+				local CheckEnemy = Chams['Enemy']:FindFirstChild(Target['Name'])
+				if CheckEnemy then
+					CheckEnemy:Destroy()
+				end
+
+				local Folder = Chams['Team']:FindFirstChild(Target['Name'])
+					or Create('Folder', Chams['Team']){Name = Target['Name']}
+					
+				for __, part in next, (char:GetChildren()) do
+					if part:IsA('BasePart') then
+						Create('BoxHandleAdornment', Folder)
+						{
+							Name = part.Name .. '_CHAM';
+							Color3 = TeamSettings.Color[2];
+							AlwaysOnTop = true;
+							Transparency = ChamSettings.Transparency;
+							Visible = true;
+							ZIndex = 10;
+							
+							Size = (part['Name'] == 'Head' and Vector3.new(1.25, 1.3, 1.25))
+								or (Vector3.new(.5, .5, .5) + part.Size)
+						}['Adornee'] = part
+					end
+				end
+			end
+
+		elseif Misc['CharFunctions']['TeamChams'] then
+			Misc['CharFunctions']['TeamChams'] = nil
+			Chams['Team']:ClearAllChildren()
+		end
+
+		ChamSettings.Busy = false
+	end,
+
+	['Enemy Chams'] = function()
+		local ChamSettings = Settings.Chams
+		if ChamSettings.Busy then return end
+		ChamSettings.Busy = true
+
+		local EnemySettings = ChamSettings.Enemy
+		EnemySettings.Enabled = not EnemySettings.Enabled
+
+		if EnemySettings.Enabled then
+			Misc['CharFunctions']
+			['EnemyChams'] = function(char)
+				local Target = Players:GetPlayerFromCharacter(char)
+				if (Target == Player) or (Target.TeamColor == Player.TeamColor) then return end
+				
+				local CheckTeam = Chams['Team']:FindFirstChild(Target['Name'])
+				if CheckTeam then
+					CheckTeam:Destroy()
+				end
+
+				local Folder = Chams['Enemy']:FindFirstChild(Target['Name'])
+					or Create('Folder', Chams['Enemy']){Name = Target['Name']}
+					
+				for __, part in next, (char:GetChildren()) do
+					if part:IsA('BasePart') then
+						Create('BoxHandleAdornment', Folder)
+						{
+							Name = part.Name .. '_CHAM';
+							Color3 = EnemySettings.Color[2];
+							AlwaysOnTop = true;
+							Transparency = ChamSettings.Transparency;
+							Visible = true;
+							ZIndex = 10;
+							
+							Size = (part['Name'] == 'Head' and Vector3.new(1.25, 1.3, 1.25))
+								or (Vector3.new(.5, .5, .5) + part.Size)
+						}['Adornee'] = part
+					end
+				end
+			end
+
+		elseif Misc['CharFunctions']['EnemyChams'] then
+			Misc['CharFunctions']['EnemyChams'] = nil
+			Chams['Enemy']:ClearAllChildren()
+		end
+
+		ChamSettings.Busy = false
+	end,
+
+	['Chams Transparency'] = function(change)
+		local ChamSettings = Settings.Chams
+		if ChamSettings.Busy then return end
+		ChamSettings.Busy = true
+
+		if change then
+			local Trans = ChamSettings.Transparency
+			ChamSettings.Transparency = (Trans < .8 and Trans + (1/10)) or 0 
+		end
+		
+		local TeamCham = Chams['Team']:GetChildren()
+		local EnemyCham = Chams['Enemy']:GetChildren()
+		
+		for __, object in next, (TeamCham) do
+			for __, bha in next, (object:GetChildren()) do
+				bha.Transparency = ChamSettings.Transparency
+				bha.Color3 = ChamSettings.Team.Color[2]
+			end
+		end
+		
+		for __, object in next, (EnemyCham) do
+			for __, bha in next, (object:GetChildren()) do
+				bha.Transparency = ChamSettings.Transparency
+				bha.Color3 = ChamSettings.Enemy.Color[2]
+			end
+		end
+		
+		ChamSettings.TransparencyUI['Key'].Text = '[' .. ChamSettings.Transparency .. ']'
+		ChamSettings.Busy = false
+	end,
+
+	['Fullbright'] = function(Toggle)
+		local Fullbright = Settings.Fullbright		
+		if Toggle then Fullbright.Enabled = not (Fullbright.Enabled); end
+		
+		local function Handle()
+			local Setting = Fullbright.Options[Fullbright.Current]
+			local Settings = Fullbright.OptionDefs[Setting]
+			
+			
+			Fullbright.UI.Key['Text'] = '[' .. Setting .. ']'
+			Lighting.Ambient = Settings.InAmbience;
+			Lighting.OutdoorAmbient = Settings.OutAmbience;
+			Lighting.Brightness = Settings.Brightness;
+			Lighting.FogStart = Settings.Fog;
+			Lighting.FogEnd = Settings.Fog;
+		end		
+		
+		if (not Fullbright.Enabled) then
+			Fullbright.Current = 3
+		end
+		
+		Handle()
+	end;
+	
+	['Aimbot'] = function(AimbotSettings)
+		local IgnorePlayersNamed = {A1_exe=true} -- Name = true or false
+		--[[
+			[J] - To go down the list.
+			[U] - To go up the list.
+			[H] - To toggle that item in the list.
+			[RMB] - To aim at your target using the current settings. (THIS UPDATES IN LIVE TIME SO YOU DON'T HAVE TO STOP AIMING FOR IT TO TAKE EFFECT)
+		--]]
+
+		local cre = Create
+		local ResizeUI = function(ui,downscale,byclass)
+			if not rawequal(ui['ClassName'],'ScrollingFrame') then return end
+			
+			local count = 0;	
+			for __, asset in next, (ui:GetChildren()) do
+				if rawequal(asset['ClassName'],byclass) then
+					count = count + 1
+				end
+			end
+			
+			ui['CanvasSize'] = UDim2.new(ui.CanvasSize.X.Scale,ui.CanvasSize.X.Offset,ui.CanvasSize.Y.Scale,downscale*count)
+		end
+		
+		local wfc, ffc, ffoc, cast, ray = World.WaitForChild, World.FindFirstChild, World.FindFirstChildOfClass, World.FindPartOnRayWithIgnoreList, Ray.new
+		local wfcoc = function(p,class)
+			local obj
+			repeat Run.RenderStepped:wait() 
+				obj = p:FindFirstChildOfClass(class)
+			until obj
+			return obj
+		end
+		
+		local Client = Player
+		local ClientUI = wfc(Client,'PlayerGui')
+		local ClientMouse = Client:GetMouse()
+		local ClientModel = Client.Character or Client.CharacterAdded:wait()
+		local ClientCamera = World.CurrentCamera
+		local ClientHumanoid = wfcoc(ClientModel,'Humanoid')
+		local ClientActiveUI;
+		
+		local status = {
+			Enabled = false,
+			TeamCheck = false,
+			HeadsOnly = false,
+			RayCheck = true,
+			CamCheck = false, -- // Don't check inside the camera
+			AutoAim = false,
+		}
+		
+		local function toggle(button)
+			local option, val = button['Text']:match('(.*):%s*(.*)')
+			status[option] = not status[option]
+			
+			if status[option] then
+				button.TextColor3 = Color3.fromRGB(0,255,0)
+			else
+				button.TextColor3 = Color3.fromRGB(255,0,0)
+			end
+			button.Text = option .. ': ' .. tostring(status[option])
+		end
+		
+		local selection = {}
+		local select_pos = 1
+		local current_pos = 0
+		local __ = function()
+			if ffc(game.CoreGui, '___') then return end
+			
+			local GUI = cre('ScreenGui',game.CoreGui){
+				Name = '___';
+			}
+			
+			local Frame = cre('ScrollingFrame',GUI){
+				BackgroundTransparency           	= 1,
+				BorderSizePixel 		        = 0,
+				Name 					= 'Options',
+				Position 				= UDim2.new(.8,0,.915,0),
+				Size 					= UDim2.new(.2,0,0,30),
+				ZIndex 					= 10,
+				ClipsDescendants 	        	= true,
+				CanvasSize 				= UDim2.new(0,0,0,0),
+				ScrollBarThickness 		= 0,
+				ScrollingEnabled 		= false,
+			}
+			
+			local UILL 					= cre('UIListLayout',Frame){
+				Name 					= 'LayoutHandler',
+				FillDirection 			        = 'Vertical',
+				HorizontalAlignment             	= 'Center',
+				SortOrder 				= 'LayoutOrder',
+				VerticalAlignment 	        	= 'Top'
+			}
+			
+			local Template = cre('TextButton',nil){
+				BackgroundTransparency           	= 1,
+				BorderSizePixel 	        	= 0,
+				Name 					= 'Template',
+				Size 					= UDim2.new(.9,0,0,30),
+				Font 					= 'SciFi',
+				Text 					= '',
+				TextColor3 				= Color3.fromRGB(255,255,255),
+				TextScaled 				= true,
+				TextWrapped 		          	= true,
+			} 
+			
+			local TSC = cre('UISizeConstraint',Template){
+				Name 					= 'TemplateSizeConstraint',		
+				MaxSize 				= Vector2.new(math.huge,30),
+			}
+			
+			Frame['ChildAdded']:connect(function()
+				ResizeUI(Frame,30,'TextButton')
+			end)
+			
+			local sel_pos = 0
+			for option, val in next, status do
+				local tp = Template:Clone()
+				
+				tp.Name = option
+				tp.Text = option .. ': ' .. tostring(val)
+				
+				if status[option] then
+					tp.TextColor3 = Color3.fromRGB(0,255,0)
+				else
+					tp.TextColor3 = Color3.fromRGB(255,0,0)
+				end
+				
+				sel_pos = sel_pos + 1
+				selection[sel_pos] = tp		
+				tp.Parent = Frame
+			end
+		
+			Frame.CanvasPosition = Vector2.new(0, current_pos)
+			return Frame
+		end
+		
+		Client['CharacterAdded']:connect(function(c)
+			ClientModel = c
+			ClientHumanoid = wfcoc(ClientModel,'Humanoid')
+			ClientActiveUI.Parent.Parent = nil
+			ClientActiveUI = coroutine.wrap(__)()
+		end)
+		ClientActiveUI = coroutine.wrap(__)()
+		
+		local right_down, keylogs, inputlogs = nil, {}, {}
+		Input.InputBegan:connect(function(input, procc)
+			keylogs[input.KeyCode],inputlogs[input.UserInputType] = true, true;
+			
+			if procc then return end
+			if not ClientActiveUI then return end
+			if keylogs[Enum.KeyCode.U] and current_pos >= 30 then
+				select_pos = select_pos - 1
+				current_pos = current_pos - 30
+				ClientActiveUI.CanvasPosition = Vector2.new(0,current_pos)
+				
+			elseif keylogs[Enum.KeyCode.J] and current_pos < ClientActiveUI.CanvasSize.Y.Offset - 30 then
+				select_pos = select_pos + 1		
+				current_pos = current_pos + 30		
+				ClientActiveUI.CanvasPosition = Vector2.new(0,current_pos)
+				
+			elseif keylogs[Enum.KeyCode.H] then
+				if selection[select_pos] then
+					toggle(selection[select_pos])
+				end
+			end
+		end)
+		Input.InputEnded:connect(function(input, procc)
+			keylogs[input.KeyCode],inputlogs[input.UserInputType] = false, false;
+		end)
+		
+		local function Search(depth)
+			local results = {}
+
+			local function RecursiveSearch(Obj, level)
+				for __, child in next, (Obj:GetChildren()) do
+					local nottarget = true;
+
+					if child:IsA('Model') then
+						local hum = ffoc(child,'Humanoid')
+						if hum then
+							nottarget = false;
+
+							if hum.Health > 0 then
+								local UserFromChar = Players:GetPlayerFromCharacter(child)
+								if not rawequal(UserFromChar, Client) then
+									table.insert(results, {child, UserFromChar})
+								end
+							end
+						end
+					end
+
+					if nottarget and (level < depth) and ((child ~= ClientCamera) or status['CamCheck']) then
+						RecursiveSearch(child, level + 1)
+					end
+				end
+			end	
+
+			RecursiveSearch(World, 1)
+			return results
+		end
+		
+		local function cast_ray(p0,p1,blacklist)
+			local Part
+			local __=0
+			repeat
+				__=__+1
+				local cond=(p1-p0).magnitude < 999
+				Part,p0=cast(workspace,ray(p0,cond and p1-p0 or (p1-p0).unit*999),blacklist)
+				if Part then
+					if Part.CanCollide == false or Part.Transparency >= 0.9 or ffoc(Part.Parent, 'Humanoid') then
+						blacklist[#blacklist+1]=Part
+						Part=nil
+					end
+				elseif cond or __ > 15 then
+					break
+				end
+			until Part
+			return Part,p0
+		end
+		
+		Run.RenderStepped:Connect(function()
+			local Storage = {}
+			if status['Enabled'] and (inputlogs[Enum.UserInputType.MouseButton2] or status['AutoAim']) then
+				Storage = Search(AimbotSettings.Depth)
+				
+				local range, dot, face = math.huge, -1
+				for __, info in next, (Storage) do
+					local hum = ffoc(info[1], 'Humanoid')
+					local root = ffc(info[1], 'HumanoidRootPart')
+					local head = ffc(info[1], 'Head')
+					local skip;
+					
+					if not inputlogs[Enum.UserInputType.MouseButton2] and not status['AutoAim'] then return end
+					if not info[1] or IgnorePlayersNamed[info[1]['Name']] or (info[2] and IgnorePlayersNamed[info[2]['Name']]) or ffoc(info[1],'ForceField') then skip = true end
+					if not root or (status['HeadsOnly'] and not head) then skip = true end
+							
+					if hum and hum['Health'] > 0 then
+						if status['TeamCheck'] and info[2] then
+							if Client['TeamColor'] == info[2]['TeamColor'] then 
+								skip = true 
+							end
+						end
+						
+						if not skip then
+							local cc 		= ClientCamera.CFrame
+							local pos 		= ((status['HeadsOnly'] and head) and head.Position) or info[1]['HumanoidRootPart'].Position
+							local hitPart 	= cast_ray(cc.p,pos,{ClientCamera,ClientModel})
+							local dist = (pos-cc.p).magnitude
+							
+							if not (status['RayCheck'] and hitPart) or info[1]:IsAncestorOf(hitPart) then
+								local m = (pos-cc.p).unit:Dot(cc.lookVector)
+								if rawequal(m,m) and (m > dot or ((dist <= AimbotSettings.PriorityRange) and (dist <= range))) then
+									dot, face, range = m, pos, dist
+								end
+							end
+						end
+					end
+				end
+
+				if face then
+			        --ClientCamera.CFrame = CFrame.new(ClientCamera.CFrame.p,face) * CFrame.new(0,0,0.5)
+					if iswindowactive() then
+                        local Pos, InFront = ClientCamera:WorldToScreenPoint(face)
+                        local TargetX, TargetY = (InFront and Pos.x) or -Pos.x, Pos.y
+                        local MouseX, MouseY = ClientMouse.X, ClientMouse.Y
+                        local NewX, NewY = math.abs(MouseX - TargetX), math.abs(MouseY - TargetY)
+                        local Inc = GameSettings.MouseSensitivity * (17/3)
+                        
+                        if (MouseX > TargetX) then
+                            NewX = -NewX/Inc
+                        else
+                            NewX = NewX/Inc
+                        end
+                       
+                        if (MouseY > TargetY) then
+                            NewY = -NewY/Inc
+                        else
+                            NewY = NewY/Inc
+                        end
+                       
+                        mousemoverel(NewX, NewY)
+                    end
+				end
+			end
+		end)
+	end
+}
+
+Settings = (function()
+	local NewSettings = {
+		--- ESP ---	
+		ESP = {
+			Enabled = false;
+		},
+
+		--- Chams ---	
+		Chams = {
+			Busy = false;
+
+			Team = {
+				Enabled = false;
+				Color = GetColor(Misc.ChamsColors, 'Grey');
+			},
+
+			Enemy = {
+				Enabled = false;
+				Color = GetColor(Misc.ChamsColors, 'Red');
+			},
+
+			Transparency = 0
+		},
+
+		--- Aimbot ---	
+		Aimbot = {
+			Enabled = false;
+			PriorityRange = 75;
+			MaxDepth = 3;
+			Depth = 1;
+		},
+
+		--- Floaty ---	
+		Floaty = {
+			Enabled = false;
+			Height = 3.9;
+			Current = 1;
+			Options = {'Still', 'Up', 'Down'}
+		},
+
+		--- Fullbright ---	
+		Fullbright = {
+			Enabled = false;
+			Current = 1;
+			Options = {'Max','Half','Default'};
+			OptionDefs = {
+				Max = {
+					Fog = 1000000;
+					Brightness = 10;
+					InAmbience = Color3.new(1, 1, 1);
+					OutAmbience = Color3.new(1, 1, 1);
+				};
+				Half = {
+					Fog = 250;
+					Brightness = 1.5;
+					InAmbience = Color3.new(0.6, 0.6, 0.6);
+					OutAmbience = Color3.new(0.6, 0.6, 0.6);
+				};
+				Default = {
+					Fog = Lighting.FogEnd;
+					Brightness = Lighting.Brightness;
+					InAmbience = Lighting.Ambient;
+					OutAmbience = Lighting.OutdoorAmbient;
+				}
+			}
+		}
+	}
+	
+	for __, option in next, (Settings) do
+		local NewOption = Button:Clone()
+		if option[1] == 'Menu' or option[1]:match('Written') or option[1] == 'Chams Transparency' then
+			NewOption['Status']['Style'] = 'Custom';
+			NewOption['Key']['TextStrokeColor3'] = Misc.GUIColors.Enabled
+		end
+		
+		NewOption['Text'].Text = option[1]:match('COLOR') and (
+				(option[1]:match('Team') and option[1]:gsub('COLOR', NewSettings.Chams.Team.Color[1])) or
+				(option[1]:match('Enemy') and option[1]:gsub('COLOR', NewSettings.Chams.Enemy.Color[1]))
+				 ) or option[1]
+		NewOption['Key'].Text = '['.. ((typeof(option[3]) == 'EnumItem' and option[3].Name) or option[3]) .. ']'		
+		NewOption.Parent = Menu['Main']['Buttons']
+		
+		local Func, Name = GetFunc(Functions, option[1])
+		if Func then
+			NewOption['Text']['MouseButton1Down']:connect(function()
+				if not option[2] then return end				
+				if NewOption.Status.Style.Name == 'DropShadow' then
+					NewOption.Status.Style = 'Custom'
+					NewOption['Key']['TextStrokeColor3'] = Misc.GUIColors.Enabled
+				elseif NewOption.Status.Style.Name == 'Custom' and not option[1]:match('Aimbot') then
+					NewOption.Status.Style = 'DropShadow'
+					NewOption['Key']['TextStrokeColor3'] = Misc.GUIColors.Disabled
+				end
+				
+				if option[1]:match('Aimbot') and not NewSettings.Aimbot.Enabled then
+					NewSettings.Aimbot.Enabled = true
+					Func(NewSettings.Aimbot)
+					
+				elseif option[1]:match('Fullbright') then
+					Func(true)
+				
+				elseif option[1]:match('Floaty') then
+					Func('Toggle')					
+					
+				else
+					Func()
+				end
+			end)
+			
+			if option[1]:match('Team') then
+				-- These happen after Settings are overwritten
+				NewOption['Key']['MouseButton1Down']:connect(function()					
+					local ChamSettings = Settings.Chams
+					local TeamSettings = ChamSettings.Team
+					local ChamColors = Misc.ChamsColors
+					if not TeamSettings.Enabled then return end
+					local Pos = table.find(ChamColors, TeamSettings.Color)
+
+					if (Pos + 1) < #ChamColors then
+						NewOption['Text'].Text = NewOption['Text'].Text:gsub(TeamSettings.Color[1], ChamColors[Pos + 1][1])
+						TeamSettings.Color = ChamColors[Pos + 1]
+					else
+						NewOption['Text'].Text = NewOption['Text'].Text:gsub(TeamSettings.Color[1], ChamColors[1][1])
+						TeamSettings.Color = ChamColors[1]
+					end
+
+					GetFunc(Functions, 'Chams Transparency')()
+				end)
+			elseif option[1]:match('Enemy') then
+				-- These happen after Settings are overwritten
+				NewOption['Key']['MouseButton1Down']:connect(function()
+					local ChamSettings = Settings.Chams
+					local EnemySettings = ChamSettings.Enemy
+					local ChamColors = Misc.ChamsColors
+					if not EnemySettings.Enabled then return end
+					local Pos = table.find(ChamColors, EnemySettings.Color)
+
+					if (Pos + 1) < #ChamColors then
+						NewOption['Text'].Text = NewOption['Text'].Text:gsub(EnemySettings.Color[1], ChamColors[Pos + 1][1])
+						EnemySettings.Color = ChamColors[Pos + 1]
+					else
+						NewOption['Text'].Text = NewOption['Text'].Text:gsub(EnemySettings.Color[1], ChamColors[1][1])
+						EnemySettings.Color = ChamColors[1]
+					end
+				
+					GetFunc(Functions, 'Chams Transparency')()
+				end)
+
+			elseif option[1] == 'Chams Transparency' then
+				NewSettings.Chams.TransparencyUI = NewOption
+				-- These happen after Settings are overwritten
+				NewOption['Key']['MouseButton1Down']:connect(function()
+					GetFunc(Functions, 'Chams Transparency')(true)
+				end)
+
+			elseif option[1] == 'Fullbright' then
+				NewSettings.Fullbright.UI = NewOption
+				-- These happen after Settings are overwritten
+				NewOption['Key']['MouseButton1Down']:connect(function()
+					local Fullbright = Settings.Fullbright
+					if not Fullbright.Enabled then return end
+					if Fullbright.Current < #Fullbright.Options	 then
+						Fullbright.Current = Fullbright.Current + 1
+					else
+						Fullbright.Current = 1
+					end
+					GetFunc(Functions, 'Fullbright')(false)
+				end)
+				
+			elseif option[1] == 'Aimbot' then
+				NewOption['Key'].Text = '[ Depth: ' .. NewSettings.Aimbot.Depth .. ' ]'
+				-- These happen after Settings are overwritten
+				NewOption['Key']['MouseButton1Down']:connect(function()
+					local Aimbot = Settings.Aimbot
+					if not Aimbot.Enabled then return end
+					if Aimbot.Depth < Aimbot.MaxDepth then
+						Aimbot.Depth = Aimbot.Depth + 1
+					else
+						Aimbot.Depth = 1
+					end
+
+					NewOption['Key'].Text = '[ Depth: ' .. Settings.Aimbot.Depth .. ' ]'
+				end)
+			elseif option[1] == 'Floaty' then
+				NewSettings.Floaty.UI = NewOption
+				-- These happen after Settings are overwritten
+				NewOption['Key']['MouseButton1Down']:connect(function()
+					local Floaty = Settings.Floaty
+					if not Floaty.Enabled then return end
+					if Floaty.Current < #Floaty.Options	 then
+						Floaty.Current = Floaty.Current + 1
+					else
+						Floaty.Current = 1
+					end
+					GetFunc(Functions, 'Floaty')(Floaty.Options[Floaty.Current])
+				end)
+			end
+		end
+	end
+
+	return NewSettings
+end)()
+
+setmetatable(Misc['CharFunctions'], {
+	__newindex = function(self, funcName, newFunc)
+		rawset(Misc['CharFunctions'], funcName, newFunc)
+		for __, player in next, (Players:GetPlayers()) do
+			if player.Character then
+				newFunc(player.Character)
+			end
+		end
+	end
+})
+
+local CharacterRemoving = function(Char, Target)
+	local Team = Chams['Team']:FindFirstChild(Target['Name'])
+	local Enemy = Chams['Enemy']:FindFirstChild(Target['Name'])
+	
+	if Team then
+		for __, handle in next, (Team:GetChildren()) do
+			if handle['Adornee'] and not handle['Adornee']:IsDescendantOf(game) then
+				handle['Parent'] = nil
+				handle.Visible = false
+			end
+		end
+	end
+		
+	if Enemy then
+		for __, handle in next, (Enemy:GetChildren()) do
+			if handle['Adornee'] and not handle['Adornee']:IsDescendantOf(game) then
+				handle['Parent'] = nil
+				handle.Visible = false
+			end
+		end
+	end
+end
+
+local CharacterAdded = function(Char, Target)
+	if (Target == Player) then return end
+	for __, func in next, (Misc['CharFunctions']) do
+		func(Char)
+	end
+end
+
+Player:GetPropertyChangedSignal("Team"):Connect(function()
+	local ChamSettings = Settings.Chams
+	if ChamSettings.Team then
+		local TeamChamsFunc = GetFunc(Functions, 'Team Chams')
+		TeamChamsFunc()
+		TeamChamsFunc()
+	end
+
+	if ChamSettings.Enemy then
+		local EnemyChamsFunc = GetFunc(Functions, 'Enemy Chams')
+		EnemyChamsFunc()
+		EnemyChamsFunc()
+	end
+end)
+
+for __, player in next, (Players:GetPlayers()) do
+	player:GetPropertyChangedSignal("Team"):Connect(function()
+		CharacterAdded(player.Character or player.CharacterAdded:wait(), player)
+	end)
+
+	player['CharacterAdded']:connect(function(char)
+		CharacterAdded(char, player)
+	end)
+
+	player['CharacterRemoving']:connect(function(char)
+		CharacterRemoving(char, player)
+	end)
+end
+
+Players.PlayerAdded:connect(function(player)
+	player:GetPropertyChangedSignal("Team"):Connect(function()
+		CharacterAdded(player.Character or player.CharacterAdded:wait(), player)
+	end)
+	
+	player['CharacterAdded']:connect(function(char)
+		CharacterAdded(char, player)
+	end)
+
+	player['CharacterRemoving']:connect(function(char)
+		CharacterRemoving(char, player)
+	end)
+end)
+
+Players.PlayerRemoving:connect(function(player)
+	local ESP = ESPF:FindFirstChild(player['Name'])
+	
+	if ESP then ESP['Parent'] = nil end
+end)
+
+Input['InputBegan']:connect(function(input, og)
+	if og then return end
+	
+	if input.UserInputType == Enum.UserInputType.Keyboard then
+		if input.KeyCode == Enum.KeyCode.Delete then
+			Functions['Menu']()
+		elseif input.KeyCode == Enum.KeyCode.B then
+			Functions['Floaty']('Up')
+		elseif input.KeyCode == Enum.KeyCode.N then
+			Functions['Floaty']('Still')
+		elseif input.KeyCode == Enum.KeyCode.M then
+			Functions['Floaty']('Down')	
+		end		
+	end
+end)
+
+Menu.Parent = game.CoreGui
