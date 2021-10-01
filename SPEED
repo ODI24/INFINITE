@@ -1,0 +1,22 @@
+Speed = 0.7 -- 1 is pretty much good but you do you :D
+
+_G.Speed = true -- Toggle Speed
+
+You = game.Players.LocalPlayer.Name
+UIS = game:GetService("UserInputService")
+
+while _G.Speed do
+   if UIS:IsKeyDown(Enum.KeyCode.W) then
+       game:GetService("Workspace")[You].HumanoidRootPart.CFrame = game:GetService("Workspace")[You].HumanoidRootPart.CFrame * CFrame.new(0,0,-Speed)
+   end;
+   if UIS:IsKeyDown(Enum.KeyCode.A) then
+       game:GetService("Workspace")[You].HumanoidRootPart.CFrame = game:GetService("Workspace")[You].HumanoidRootPart.CFrame * CFrame.new(-Speed,0,0)
+   end;
+   if UIS:IsKeyDown(Enum.KeyCode.S) then
+       game:GetService("Workspace")[You].HumanoidRootPart.CFrame = game:GetService("Workspace")[You].HumanoidRootPart.CFrame * CFrame.new(0,0,Speed)
+   end;
+   if UIS:IsKeyDown(Enum.KeyCode.D) then
+       game:GetService("Workspace")[You].HumanoidRootPart.CFrame = game:GetService("Workspace")[You].HumanoidRootPart.CFrame * CFrame.new(Speed,0,0)
+   end;
+wait()
+end
