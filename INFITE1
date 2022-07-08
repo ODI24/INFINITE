@@ -1,0 +1,1791 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local FLY = Instance.new("TextButton")
+local ANTIAFK = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local MUR = Instance.new("TextButton")
+local FPS = Instance.new("TextButton")
+local FULLBRIGHT = Instance.new("TextButton")
+local TextLabel_3 = Instance.new("TextLabel")
+local ADMIN = Instance.new("TextButton")
+local LOGGS = Instance.new("TextButton")
+local NOCLIP = Instance.new("TextButton")
+local TRIGGERBOT = Instance.new("TextButton")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+local TextLabel_6 = Instance.new("TextLabel")
+local TextLabel_7 = Instance.new("TextLabel")
+local Aimbot = Instance.new("TextButton")
+local TextLabel_8 = Instance.new("TextLabel")
+local NAMESESP = Instance.new("TextButton")
+local TextLabel_9 = Instance.new("TextLabel")
+local TextLabel_10 = Instance.new("TextLabel")
+local TextLabel_11 = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local COUNTERBLOX1 = Instance.new("TextButton")
+local TextLabel_12 = Instance.new("TextLabel")
+local TextLabel_13 = Instance.new("TextLabel")
+local ARSENAL = Instance.new("TextButton")
+local GODEMODE = Instance.new("TextButton")
+local TextLabel_14 = Instance.new("TextLabel")
+local TextLabel_15 = Instance.new("TextLabel")
+local TRIGGERBOT_2 = Instance.new("TextButton")
+local COUNTERBLOX = Instance.new("TextButton")
+local PHANTOMFORCES1 = Instance.new("TextButton")
+local TextLabel_16 = Instance.new("TextLabel")
+local INFJUMP = Instance.new("TextButton")
+local TextLabel_17 = Instance.new("TextLabel")
+local INVISIBLE = Instance.new("TextButton")
+local TextLabel_18 = Instance.new("TextLabel")
+local TextLabel_19 = Instance.new("TextLabel")
+local TOOL = Instance.new("TextButton")
+local TextLabel_20 = Instance.new("TextLabel")
+local FREECAM = Instance.new("TextButton")
+local TextLabel_21 = Instance.new("TextLabel")
+local FPS_2 = Instance.new("TextButton")
+local TextLabel_22 = Instance.new("TextLabel")
+local PRISIONLIFE = Instance.new("TextButton")
+local RADGOLLENGINE = Instance.new("TextButton")
+local AIMBOT = Instance.new("TextButton")
+local BONES = Instance.new("TextButton")
+local PHANTOMFORCES = Instance.new("TextButton")
+local TextLabel_23 = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local TextLabel_24 = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
+local TextLabel_25 = Instance.new("TextLabel")
+local BONES_2 = Instance.new("TextButton")
+local ARSENAL_2 = Instance.new("TextButton")
+local TextLabel_26 = Instance.new("TextLabel")
+local TextLabel_27 = Instance.new("TextLabel")
+local Frame1 = Instance.new("Frame")
+local TextLabel_28 = Instance.new("TextLabel")
+local TRIGGERBOT_3 = Instance.new("TextButton")
+local TextLabel_29 = Instance.new("TextLabel")
+local TRIGGERBOT_4 = Instance.new("TextButton")
+local TextLabel_30 = Instance.new("TextLabel")
+local TRIGGERBOT_5 = Instance.new("TextButton")
+local TextLabel_31 = Instance.new("TextLabel")
+local TRIGGERBOT_6 = Instance.new("TextButton")
+local TextLabel_32 = Instance.new("TextLabel")
+local TRIGGERBOT_7 = Instance.new("TextButton")
+local TextLabel_33 = Instance.new("TextLabel")
+local TRIGGERBOT_8 = Instance.new("TextButton")
+local TextLabel_34 = Instance.new("TextLabel")
+local TRIGGERBOT_9 = Instance.new("TextButton")
+local TextLabel_35 = Instance.new("TextLabel")
+local Frame3 = Instance.new("Frame")
+local BESTDANCE = Instance.new("TextButton")
+local TextLabel_36 = Instance.new("TextLabel")
+local TRIGGERBOT_10 = Instance.new("TextButton")
+local TextLabel_37 = Instance.new("TextLabel")
+local CHILL = Instance.new("TextButton")
+local TextLabel_38 = Instance.new("TextLabel")
+local TRIGGERBOT_11 = Instance.new("TextButton")
+local TextLabel_39 = Instance.new("TextLabel")
+local TRIGGERBOT_12 = Instance.new("TextButton")
+local TextLabel_40 = Instance.new("TextLabel")
+local TRIGGERBOT_13 = Instance.new("TextButton")
+local TextLabel_41 = Instance.new("TextLabel")
+local TRIGGERBOT_14 = Instance.new("TextButton")
+local TextLabel_42 = Instance.new("TextLabel")
+local TRIGGERBOT_15 = Instance.new("TextButton")
+local TextLabel_43 = Instance.new("TextLabel")
+local TRIGGERBOT_16 = Instance.new("TextButton")
+local TextLabel_44 = Instance.new("TextLabel")
+local TRIGGERBOT_17 = Instance.new("TextButton")
+local TextLabel_45 = Instance.new("TextLabel")
+local TextLabel_46 = Instance.new("TextLabel")
+local TRIGGERBOT_18 = Instance.new("TextButton")
+local TextLabel_47 = Instance.new("TextLabel")
+local TextLabel_48 = Instance.new("TextLabel")
+local gps_fixed = Instance.new("ImageButton")
+local rotate_right = Instance.new("ImageButton")
+local TextLabel_49 = Instance.new("TextLabel")
+local TextLabel_50 = Instance.new("TextLabel")
+local TextLabel_51 = Instance.new("TextLabel")
+local AnimatedRainbow = Instance.new("UIGradient")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+Frame.BorderColor3 = Color3.fromRGB(61, 61, 61)
+Frame.Position = UDim2.new(0.0177113563, 0, 0.0374643952, 0)
+Frame.Size = UDim2.new(0, 494, 0, 24)
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 2
+Frame_2.Position = UDim2.new(-0.000424103811, 0, 2.11234355, 0)
+Frame_2.Size = UDim2.new(0, 185, 0, 534)
+
+TextButton.Parent = Frame_2
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.747380733, 0, 0.239700377, 0)
+TextButton.Size = UDim2.new(0, 32, 0, 27)
+TextButton.Font = Enum.Font.GothamBold
+TextButton.Text = "BUNNY HOP"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 11.000
+TextButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+TextLabel.Parent = Frame_2
+TextLabel.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel.Position = UDim2.new(0.249790579, 0, 0.948644519, 0)
+TextLabel.Size = UDim2.new(0, 34, 0, 23)
+TextLabel.Font = Enum.Font.GothamBlack
+TextLabel.Text = "BOOGA BOOGA"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 9.000
+TextLabel.TextWrapped = true
+
+FLY.Name = "FLY"
+FLY.Parent = Frame_2
+FLY.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FLY.BorderColor3 = Color3.fromRGB(255, 255, 255)
+FLY.Position = UDim2.new(0.0291425548, 0, 0.0564960651, 0)
+FLY.Size = UDim2.new(0, 59, 0, 31)
+FLY.Font = Enum.Font.GothamBold
+FLY.Text = "FLY"
+FLY.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+ANTIAFK.Name = "ANTI AFK"
+ANTIAFK.Parent = Frame_2
+ANTIAFK.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ANTIAFK.BorderColor3 = Color3.fromRGB(255, 255, 255)
+ANTIAFK.Position = UDim2.new(0.680200338, 0, 0.170871407, 0)
+ANTIAFK.Size = UDim2.new(0, 56, 0, 30)
+ANTIAFK.Font = Enum.Font.GothamBold
+ANTIAFK.Text = "ANTI AFK"
+ANTIAFK.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+TextLabel_2.Parent = Frame_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(147, 98, 0)
+TextLabel_2.BorderColor3 = Color3.fromRGB(90, 90, 90)
+TextLabel_2.Position = UDim2.new(0.0249034967, 0, 0.114021748, 0)
+TextLabel_2.Size = UDim2.new(0, 101, 0, 16)
+TextLabel_2.Font = Enum.Font.GothamBold
+TextLabel_2.Text = "SHOOTERS"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 18.000
+
+UICorner.Parent = TextLabel_2
+
+MUR.Name = "MUR"
+MUR.Parent = Frame_2
+MUR.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MUR.BorderColor3 = Color3.fromRGB(255, 255, 255)
+MUR.Position = UDim2.new(0.0571132749, 0, 0.842760503, 0)
+MUR.Size = UDim2.new(0, 29, 0, 25)
+MUR.Font = Enum.Font.GothamBold
+MUR.Text = ""
+MUR.TextColor3 = Color3.fromRGB(255, 255, 255)
+MUR.TextSize = 14.000
+
+FPS.Name = "FPS"
+FPS.Parent = Frame_2
+FPS.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FPS.BorderColor3 = Color3.fromRGB(255, 255, 255)
+FPS.Position = UDim2.new(0.523443699, 0, 0.507050812, 0)
+FPS.Size = UDim2.new(0, 29, 0, 25)
+FPS.Font = Enum.Font.GothamBold
+FPS.Text = ""
+FPS.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPS.TextSize = 14.000
+
+FULLBRIGHT.Name = "FULLBRIGHT"
+FULLBRIGHT.Parent = Frame_2
+FULLBRIGHT.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FULLBRIGHT.BorderColor3 = Color3.fromRGB(255, 255, 255)
+FULLBRIGHT.Position = UDim2.new(0.680200338, 0, 0.115488432, 0)
+FULLBRIGHT.Size = UDim2.new(0, 56, 0, 29)
+FULLBRIGHT.Font = Enum.Font.GothamBold
+FULLBRIGHT.Text = "BRIGHT"
+FULLBRIGHT.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+TextLabel_3.Parent = Frame_2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_3.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_3.Position = UDim2.new(0.711497426, 0, 0.780393839, 0)
+TextLabel_3.Size = UDim2.new(0, 48, 0, 33)
+TextLabel_3.Font = Enum.Font.GothamBlack
+TextLabel_3.Text = "PHANTOM FORCES"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 9.000
+TextLabel_3.TextWrapped = true
+
+ADMIN.Name = "ADMIN"
+ADMIN.Parent = Frame_2
+ADMIN.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ADMIN.BorderColor3 = Color3.fromRGB(255, 255, 255)
+ADMIN.Position = UDim2.new(0.0441505238, 0, 0.556675076, 0)
+ADMIN.Size = UDim2.new(0, 29, 0, 25)
+ADMIN.Font = Enum.Font.GothamBold
+ADMIN.Text = ""
+ADMIN.TextColor3 = Color3.fromRGB(255, 255, 255)
+ADMIN.TextSize = 12.000
+
+LOGGS.Name = "LOGGS"
+LOGGS.Parent = Frame_2
+LOGGS.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LOGGS.BorderColor3 = Color3.fromRGB(255, 255, 255)
+LOGGS.Position = UDim2.new(0.667740464, 0, 0.0555633381, 0)
+LOGGS.Size = UDim2.new(0, 59, 0, 31)
+LOGGS.Font = Enum.Font.GothamBold
+LOGGS.Text = "LOGGS"
+LOGGS.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+NOCLIP.Name = "NOCLIP"
+NOCLIP.Parent = Frame_2
+NOCLIP.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+NOCLIP.BorderColor3 = Color3.fromRGB(255, 255, 255)
+NOCLIP.Position = UDim2.new(0.358872294, 0, 0.0555633381, 0)
+NOCLIP.Size = UDim2.new(0, 59, 0, 31)
+NOCLIP.Font = Enum.Font.GothamBold
+NOCLIP.Text = "NOCLIP \"V\""
+NOCLIP.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+TRIGGERBOT.Name = "TRIGGERBOT"
+TRIGGERBOT.Parent = Frame_2
+TRIGGERBOT.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TRIGGERBOT.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT.Position = UDim2.new(0.043999996, 0, 0.198329583, 0)
+TRIGGERBOT.Size = UDim2.new(0, 28, 0, 24)
+TRIGGERBOT.Font = Enum.Font.GothamBold
+TRIGGERBOT.Text = ""
+TRIGGERBOT.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT.TextSize = 14.000
+
+TextLabel_4.Parent = Frame_2
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_4.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_4.Position = UDim2.new(0.231557488, 0, 0.657763064, 0)
+TextLabel_4.Size = UDim2.new(0, 63, 0, 25)
+TextLabel_4.Font = Enum.Font.GothamBlack
+TextLabel_4.Text = "FREE CAMARA"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 9.000
+
+TextLabel_5.Parent = Frame_2
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_5.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_5.Position = UDim2.new(0.277931899, 0, 0.156568617, 0)
+TextLabel_5.Size = UDim2.new(0, 50, 0, 15)
+TextLabel_5.Font = Enum.Font.GothamBlack
+TextLabel_5.Text = "TRIGGER BOT"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 11.000
+
+TextLabel_6.Parent = Frame_2
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_6.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_6.Position = UDim2.new(0.704437137, 0, 0.512646437, 0)
+TextLabel_6.Size = UDim2.new(0, 49, 0, 19)
+TextLabel_6.Font = Enum.Font.GothamBlack
+TextLabel_6.Text = "CLICK WALL"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 9.000
+
+TextLabel_7.Parent = Frame_2
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.BorderColor3 = Color3.fromRGB(158, 105, 0)
+TextLabel_7.BorderSizePixel = 2
+TextLabel_7.Position = UDim2.new(-7.02729085e-05, 0, 0.382886291, 0)
+TextLabel_7.Size = UDim2.new(0, 186, 0, 14)
+TextLabel_7.Font = Enum.Font.GothamBlack
+TextLabel_7.Text = " ESP "
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextSize = 12.000
+TextLabel_7.TextWrapped = true
+
+Aimbot.Name = "Aimbot"
+Aimbot.Parent = Frame_2
+Aimbot.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Aimbot.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Aimbot.Position = UDim2.new(0.0435946062, 0, 0.334001899, 0)
+Aimbot.Size = UDim2.new(0, 28, 0, 24)
+Aimbot.Font = Enum.Font.GothamBold
+Aimbot.Text = ""
+Aimbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+Aimbot.TextSize = 14.000
+
+TextLabel_8.Parent = Frame_2
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_8.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_8.Position = UDim2.new(0.195263669, 0, 0.611504018, 0)
+TextLabel_8.Size = UDim2.new(0, 56, 0, 25)
+TextLabel_8.Font = Enum.Font.GothamBlack
+TextLabel_8.Text = "INVISIBLE"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.TextSize = 9.000
+
+NAMESESP.Name = "NAMES ESP"
+NAMESESP.Parent = Frame_2
+NAMESESP.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+NAMESESP.BorderColor3 = Color3.fromRGB(255, 255, 255)
+NAMESESP.Position = UDim2.new(0.0327837914, 0, 0.422238201, 0)
+NAMESESP.Size = UDim2.new(0, 28, 0, 25)
+NAMESESP.Font = Enum.Font.GothamBold
+NAMESESP.Text = "(B)"
+NAMESESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+NAMESESP.TextSize = 11.000
+
+TextLabel_9.Parent = Frame_2
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_9.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_9.Position = UDim2.new(0.285296708, 0, 0.259001017, 0)
+TextLabel_9.Size = UDim2.new(0, 40, 0, 13)
+TextLabel_9.Font = Enum.Font.GothamBlack
+TextLabel_9.Text = "SILENT AIM"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextSize = 11.000
+
+TextLabel_10.Parent = Frame_2
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_10.BorderColor3 = Color3.fromRGB(158, 105, 0)
+TextLabel_10.BorderSizePixel = 2
+TextLabel_10.Position = UDim2.new(-0.00547567848, 0, 0.303198516, 0)
+TextLabel_10.Size = UDim2.new(0, 186, 0, 10)
+TextLabel_10.Font = Enum.Font.GothamBlack
+TextLabel_10.Text = "AIMBOT"
+TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.TextSize = 12.000
+TextLabel_10.TextWrapped = true
+
+TextLabel_11.Parent = Frame_2
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(147, 98, 0)
+TextLabel_11.BorderColor3 = Color3.fromRGB(229, 153, 0)
+TextLabel_11.Position = UDim2.new(0.0411197133, 0, 0.706889749, 0)
+TextLabel_11.Size = UDim2.new(0, 73, 0, 14)
+TextLabel_11.Font = Enum.Font.GothamBold
+TextLabel_11.Text = "GAMES"
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.TextSize = 18.000
+
+UICorner_2.Parent = TextLabel_11
+
+COUNTERBLOX1.Name = "COUNTER BLOX 1"
+COUNTERBLOX1.Parent = Frame_2
+COUNTERBLOX1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+COUNTERBLOX1.BorderColor3 = Color3.fromRGB(255, 255, 255)
+COUNTERBLOX1.Position = UDim2.new(0.0539897196, 0, 0.735781014, 0)
+COUNTERBLOX1.Size = UDim2.new(0, 29, 0, 25)
+COUNTERBLOX1.Font = Enum.Font.GothamBold
+COUNTERBLOX1.Text = ""
+COUNTERBLOX1.TextColor3 = Color3.fromRGB(255, 255, 255)
+COUNTERBLOX1.TextSize = 14.000
+
+TextLabel_12.Parent = Frame_2
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_12.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_12.Position = UDim2.new(0.225168675, 0, 0.734516144, 0)
+TextLabel_12.Size = UDim2.new(0, 48, 0, 31)
+TextLabel_12.Font = Enum.Font.GothamBlack
+TextLabel_12.Text = "COUNTER BLOX \"INS\""
+TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.TextSize = 9.000
+TextLabel_12.TextWrapped = true
+
+TextLabel_13.Parent = Frame_2
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_13.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_13.Position = UDim2.new(0.224428594, 0, 0.894168556, 0)
+TextLabel_13.Size = UDim2.new(0, 49, 0, 25)
+TextLabel_13.Font = Enum.Font.GothamBlack
+TextLabel_13.Text = "ARSENAL"
+TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.TextSize = 9.000
+TextLabel_13.TextWrapped = true
+
+ARSENAL.Name = "ARSENAL"
+ARSENAL.Parent = Frame_2
+ARSENAL.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ARSENAL.BorderColor3 = Color3.fromRGB(255, 255, 255)
+ARSENAL.Position = UDim2.new(0.0546980985, 0, 0.896013856, 0)
+ARSENAL.Size = UDim2.new(0, 29, 0, 25)
+ARSENAL.Font = Enum.Font.GothamBold
+ARSENAL.Text = ""
+ARSENAL.TextColor3 = Color3.fromRGB(255, 255, 255)
+ARSENAL.TextSize = 14.000
+
+GODEMODE.Name = "GODEMODE"
+GODEMODE.Parent = Frame_2
+GODEMODE.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GODEMODE.BorderColor3 = Color3.fromRGB(255, 255, 255)
+GODEMODE.Position = UDim2.new(0.0435946025, 0, 0.149293244, 0)
+GODEMODE.Size = UDim2.new(0, 28, 0, 24)
+GODEMODE.Font = Enum.Font.GothamBold
+GODEMODE.Text = ""
+GODEMODE.TextColor3 = Color3.fromRGB(255, 255, 255)
+GODEMODE.TextSize = 14.000
+
+TextLabel_14.Parent = Frame_2
+TextLabel_14.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_14.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_14.Position = UDim2.new(0.221529916, 0, 0.336650193, 0)
+TextLabel_14.Size = UDim2.new(0, 14, 0, 20)
+TextLabel_14.Font = Enum.Font.GothamBold
+TextLabel_14.Text = "+"
+TextLabel_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.TextSize = 24.000
+TextLabel_14.TextWrapped = true
+
+TextLabel_15.Parent = Frame_2
+TextLabel_15.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_15.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_15.Position = UDim2.new(0.479630321, 0, 0.42568326, 0)
+TextLabel_15.Size = UDim2.new(0, 14, 0, 20)
+TextLabel_15.Font = Enum.Font.GothamBold
+TextLabel_15.Text = "+"
+TextLabel_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.TextSize = 24.000
+TextLabel_15.TextWrapped = true
+
+TRIGGERBOT_2.Name = "TRIGGERBOT"
+TRIGGERBOT_2.Parent = Frame_2
+TRIGGERBOT_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TRIGGERBOT_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_2.Position = UDim2.new(0.043999996, 0, 0.248891383, 0)
+TRIGGERBOT_2.Size = UDim2.new(0, 28, 0, 24)
+TRIGGERBOT_2.Font = Enum.Font.GothamBold
+TRIGGERBOT_2.Text = ""
+TRIGGERBOT_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_2.TextSize = 14.000
+
+COUNTERBLOX.Name = "COUNTER BLOX"
+COUNTERBLOX.Parent = Frame_2
+COUNTERBLOX.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+COUNTERBLOX.BorderColor3 = Color3.fromRGB(255, 255, 255)
+COUNTERBLOX.Position = UDim2.new(0.53394872, 0, 0.731870174, 0)
+COUNTERBLOX.Size = UDim2.new(0, 29, 0, 25)
+COUNTERBLOX.Font = Enum.Font.GothamBold
+COUNTERBLOX.Text = ""
+COUNTERBLOX.TextColor3 = Color3.fromRGB(255, 255, 255)
+COUNTERBLOX.TextSize = 14.000
+
+PHANTOMFORCES1.Name = "PHANTOM FORCES 1"
+PHANTOMFORCES1.Parent = Frame_2
+PHANTOMFORCES1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PHANTOMFORCES1.BorderColor3 = Color3.fromRGB(255, 255, 255)
+PHANTOMFORCES1.Position = UDim2.new(0.056812223, 0, 0.789120972, 0)
+PHANTOMFORCES1.Size = UDim2.new(0, 29, 0, 25)
+PHANTOMFORCES1.Font = Enum.Font.GothamBold
+PHANTOMFORCES1.Text = ""
+PHANTOMFORCES1.TextColor3 = Color3.fromRGB(255, 255, 255)
+PHANTOMFORCES1.TextSize = 14.000
+
+TextLabel_16.Parent = Frame_2
+TextLabel_16.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_16.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_16.Position = UDim2.new(0.711715281, 0, 0.843413115, 0)
+TextLabel_16.Size = UDim2.new(0, 54, 0, 27)
+TextLabel_16.Font = Enum.Font.GothamBlack
+TextLabel_16.Text = "RADGOLL ENGINE"
+TextLabel_16.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.TextSize = 9.000
+TextLabel_16.TextWrapped = true
+
+INFJUMP.Name = "INF JUMP"
+INFJUMP.Parent = Frame_2
+INFJUMP.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+INFJUMP.BorderColor3 = Color3.fromRGB(255, 255, 255)
+INFJUMP.Position = UDim2.new(0.0445945933, 0, 0.507910132, 0)
+INFJUMP.Size = UDim2.new(0, 29, 0, 25)
+INFJUMP.Font = Enum.Font.GothamBold
+INFJUMP.Text = ""
+INFJUMP.TextColor3 = Color3.fromRGB(255, 255, 255)
+INFJUMP.TextSize = 14.000
+
+TextLabel_17.Parent = Frame_2
+TextLabel_17.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_17.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_17.Position = UDim2.new(0.232251376, 0, 0.508130968, 0)
+TextLabel_17.Size = UDim2.new(0, 51, 0, 25)
+TextLabel_17.Font = Enum.Font.GothamBlack
+TextLabel_17.Text = "INF JUMP"
+TextLabel_17.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_17.TextSize = 9.000
+TextLabel_17.TextWrapped = true
+
+INVISIBLE.Name = "INVISIBLE"
+INVISIBLE.Parent = Frame_2
+INVISIBLE.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+INVISIBLE.BorderColor3 = Color3.fromRGB(255, 255, 255)
+INVISIBLE.Position = UDim2.new(0.043853756, 0, 0.608214796, 0)
+INVISIBLE.Size = UDim2.new(0, 29, 0, 25)
+INVISIBLE.Font = Enum.Font.GothamBold
+INVISIBLE.Text = ""
+INVISIBLE.TextColor3 = Color3.fromRGB(255, 255, 255)
+INVISIBLE.TextSize = 14.000
+
+TextLabel_18.Parent = Frame_2
+TextLabel_18.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_18.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_18.Position = UDim2.new(0.502731085, 0, 0.561051309, 0)
+TextLabel_18.Size = UDim2.new(0, 39, 0, 25)
+TextLabel_18.Font = Enum.Font.GothamBlack
+TextLabel_18.Text = "ADMIN TOOLS"
+TextLabel_18.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_18.TextSize = 9.000
+TextLabel_18.TextWrapped = true
+
+TextLabel_19.Parent = Frame_2
+TextLabel_19.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_19.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_19.Position = UDim2.new(0.230373979, 0, 0.559794188, 0)
+TextLabel_19.Size = UDim2.new(0, 16, 0, 23)
+TextLabel_19.Font = Enum.Font.GothamBold
+TextLabel_19.Text = "+"
+TextLabel_19.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_19.TextSize = 24.000
+TextLabel_19.TextWrapped = true
+
+TOOL.Name = "TOOL"
+TOOL.Parent = Frame_2
+TOOL.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TOOL.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TOOL.Position = UDim2.new(0.325675696, 0, 0.560344577, 0)
+TOOL.Size = UDim2.new(0, 29, 0, 25)
+TOOL.Font = Enum.Font.GothamBold
+TOOL.Text = ""
+TOOL.TextColor3 = Color3.fromRGB(255, 255, 255)
+TOOL.TextSize = 14.000
+
+TextLabel_20.Parent = Frame_2
+TextLabel_20.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_20.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_20.Position = UDim2.new(0.227378398, 0, 0.83878845, 0)
+TextLabel_20.Size = UDim2.new(0, 46, 0, 33)
+TextLabel_20.Font = Enum.Font.GothamBlack
+TextLabel_20.Text = "MURDER MYSTERY"
+TextLabel_20.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_20.TextSize = 9.000
+TextLabel_20.TextWrapped = true
+
+FREECAM.Name = "FREE CAM"
+FREECAM.Parent = Frame_2
+FREECAM.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FREECAM.BorderColor3 = Color3.fromRGB(255, 255, 255)
+FREECAM.Position = UDim2.new(0.0432733521, 0, 0.657893777, 0)
+FREECAM.Size = UDim2.new(0, 29, 0, 25)
+FREECAM.Font = Enum.Font.GothamBold
+FREECAM.Text = ""
+FREECAM.TextColor3 = Color3.fromRGB(255, 255, 255)
+FREECAM.TextSize = 14.000
+
+TextLabel_21.Parent = Frame_2
+TextLabel_21.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_21.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_21.Position = UDim2.new(0.711793661, 0, 0.897856236, 0)
+TextLabel_21.Size = UDim2.new(0, 41, 0, 24)
+TextLabel_21.Font = Enum.Font.GothamBlack
+TextLabel_21.Text = "PRISION LIFE"
+TextLabel_21.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_21.TextSize = 9.000
+TextLabel_21.TextWrapped = true
+
+FPS_2.Name = "FPS"
+FPS_2.Parent = Frame_2
+FPS_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FPS_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+FPS_2.Position = UDim2.new(0.298745781, 0, 0.421044409, 0)
+FPS_2.Size = UDim2.new(0, 28, 0, 25)
+FPS_2.Font = Enum.Font.GothamBold
+FPS_2.Text = ""
+FPS_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPS_2.TextSize = 11.000
+
+TextLabel_22.Parent = Frame_2
+TextLabel_22.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_22.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_22.Position = UDim2.new(0.285296708, 0, 0.208439216, 0)
+TextLabel_22.Size = UDim2.new(0, 40, 0, 13)
+TextLabel_22.Font = Enum.Font.GothamBlack
+TextLabel_22.Text = "NO RECOIL"
+TextLabel_22.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_22.TextSize = 11.000
+
+PRISIONLIFE.Name = "PRISION LIFE"
+PRISIONLIFE.Parent = Frame_2
+PRISIONLIFE.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PRISIONLIFE.BorderColor3 = Color3.fromRGB(255, 255, 255)
+PRISIONLIFE.Position = UDim2.new(0.536323726, 0, 0.891128778, 0)
+PRISIONLIFE.Size = UDim2.new(0, 29, 0, 25)
+PRISIONLIFE.Font = Enum.Font.GothamBold
+PRISIONLIFE.Text = ""
+PRISIONLIFE.TextColor3 = Color3.fromRGB(255, 255, 255)
+PRISIONLIFE.TextSize = 14.000
+
+RADGOLLENGINE.Name = "RADGOLL ENGINE"
+RADGOLLENGINE.Parent = Frame_2
+RADGOLLENGINE.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RADGOLLENGINE.BorderColor3 = Color3.fromRGB(255, 255, 255)
+RADGOLLENGINE.Position = UDim2.new(0.536324084, 0, 0.837667108, 0)
+RADGOLLENGINE.Size = UDim2.new(0, 29, 0, 25)
+RADGOLLENGINE.Font = Enum.Font.GothamBold
+RADGOLLENGINE.Text = ""
+RADGOLLENGINE.TextColor3 = Color3.fromRGB(255, 255, 255)
+RADGOLLENGINE.TextSize = 14.000
+
+AIMBOT.Name = "AIMBOT"
+AIMBOT.Parent = Frame_2
+AIMBOT.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AIMBOT.BorderColor3 = Color3.fromRGB(255, 255, 255)
+AIMBOT.Position = UDim2.new(0.307454914, 0, 0.335098952, 0)
+AIMBOT.Size = UDim2.new(0, 28, 0, 23)
+AIMBOT.Font = Enum.Font.GothamBold
+AIMBOT.Text = "GUI"
+AIMBOT.TextColor3 = Color3.fromRGB(255, 255, 255)
+AIMBOT.TextSize = 14.000
+
+BONES.Name = "BONES"
+BONES.Parent = Frame_2
+BONES.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BONES.BorderColor3 = Color3.fromRGB(255, 255, 255)
+BONES.Position = UDim2.new(0.800028443, 0, 0.421044409, 0)
+BONES.Size = UDim2.new(0, 28, 0, 25)
+BONES.Font = Enum.Font.GothamBold
+BONES.Text = "\"X\"RAY"
+BONES.TextColor3 = Color3.fromRGB(255, 255, 255)
+BONES.TextSize = 11.000
+
+PHANTOMFORCES.Name = "PHANTOM FORCES"
+PHANTOMFORCES.Parent = Frame_2
+PHANTOMFORCES.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PHANTOMFORCES.BorderColor3 = Color3.fromRGB(255, 255, 255)
+PHANTOMFORCES.Position = UDim2.new(0.533858657, 0, 0.78701818, 0)
+PHANTOMFORCES.Size = UDim2.new(0, 29, 0, 25)
+PHANTOMFORCES.Font = Enum.Font.GothamBold
+PHANTOMFORCES.Text = ""
+PHANTOMFORCES.TextColor3 = Color3.fromRGB(255, 255, 255)
+PHANTOMFORCES.TextSize = 14.000
+
+TextLabel_23.Parent = Frame_2
+TextLabel_23.BackgroundColor3 = Color3.fromRGB(147, 98, 0)
+TextLabel_23.BorderColor3 = Color3.fromRGB(229, 153, 0)
+TextLabel_23.Position = UDim2.new(0.0377677307, 0, 0.474738598, 0)
+TextLabel_23.Size = UDim2.new(0, 91, 0, 14)
+TextLabel_23.Font = Enum.Font.GothamBold
+TextLabel_23.Text = "ABILITIES"
+TextLabel_23.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_23.TextSize = 18.000
+
+UICorner_3.Parent = TextLabel_23
+
+TextLabel_24.Parent = Frame_2
+TextLabel_24.BackgroundColor3 = Color3.fromRGB(147, 98, 0)
+TextLabel_24.BorderColor3 = Color3.fromRGB(90, 90, 90)
+TextLabel_24.Position = UDim2.new(0.0194980931, 0, 0.0284294449, 0)
+TextLabel_24.Size = UDim2.new(0, 77, 0, 12)
+TextLabel_24.Font = Enum.Font.GothamBold
+TextLabel_24.Text = "EXTRAS"
+TextLabel_24.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_24.TextSize = 18.000
+
+UICorner_4.Parent = TextLabel_24
+
+TextLabel_25.Parent = Frame_2
+TextLabel_25.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_25.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_25.Position = UDim2.new(0.203954667, 0, 0.42568326, 0)
+TextLabel_25.Size = UDim2.new(0, 14, 0, 20)
+TextLabel_25.Font = Enum.Font.GothamBold
+TextLabel_25.Text = "+"
+TextLabel_25.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_25.TextSize = 24.000
+TextLabel_25.TextWrapped = true
+
+BONES_2.Name = "BONES"
+BONES_2.Parent = Frame_2
+BONES_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BONES_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+BONES_2.Position = UDim2.new(0.583812237, 0, 0.421044409, 0)
+BONES_2.Size = UDim2.new(0, 28, 0, 25)
+BONES_2.Font = Enum.Font.GothamBold
+BONES_2.Text = ""
+BONES_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+BONES_2.TextSize = 11.000
+
+ARSENAL_2.Name = "ARSENAL"
+ARSENAL_2.Parent = Frame_2
+ARSENAL_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ARSENAL_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+ARSENAL_2.Position = UDim2.new(0.056812223, 0, 0.949961185, 0)
+ARSENAL_2.Size = UDim2.new(0, 29, 0, 25)
+ARSENAL_2.Font = Enum.Font.GothamBold
+ARSENAL_2.Text = ""
+ARSENAL_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ARSENAL_2.TextSize = 14.000
+
+TextLabel_26.Parent = Frame_2
+TextLabel_26.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+TextLabel_26.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_26.BorderSizePixel = 3
+TextLabel_26.Position = UDim2.new(-7.02729085e-05, 0, -0.0409194082, 0)
+TextLabel_26.Size = UDim2.new(0, 185, 0, 24)
+TextLabel_26.Font = Enum.Font.GothamBold
+TextLabel_26.Text = "UNIVERSAL"
+TextLabel_26.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_26.TextSize = 20.000
+
+TextLabel_27.Parent = Frame_2
+TextLabel_27.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_27.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_27.Position = UDim2.new(0.711497426, 0, 0.727959394, 0)
+TextLabel_27.Size = UDim2.new(0, 48, 0, 33)
+TextLabel_27.Font = Enum.Font.GothamBlack
+TextLabel_27.Text = "BEE SWARM"
+TextLabel_27.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_27.TextSize = 9.000
+TextLabel_27.TextWrapped = true
+
+Frame1.Name = "Frame1"
+Frame1.Parent = Frame
+Frame1.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Frame1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame1.BorderSizePixel = 2
+Frame1.Position = UDim2.new(0.713447869, 0, 1.59194458, 0)
+Frame1.Size = UDim2.new(0, 141, 0, 266)
+
+TextLabel_28.Parent = Frame1
+TextLabel_28.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+TextLabel_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_28.BorderSizePixel = 3
+TextLabel_28.Position = UDim2.new(0, 0, -0.0352192931, 0)
+TextLabel_28.Size = UDim2.new(0, 141, 0, 22)
+TextLabel_28.Font = Enum.Font.GothamBold
+TextLabel_28.Text = "FE FLYING"
+TextLabel_28.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_28.TextSize = 20.000
+
+TRIGGERBOT_3.Name = "TRIGGERBOT"
+TRIGGERBOT_3.Parent = Frame1
+TRIGGERBOT_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TRIGGERBOT_3.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_3.Position = UDim2.new(0.087556012, 0, 0.0758034289, 0)
+TRIGGERBOT_3.Size = UDim2.new(0, 30, 0, 24)
+TRIGGERBOT_3.Font = Enum.Font.GothamBold
+TRIGGERBOT_3.Text = ""
+TRIGGERBOT_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_3.TextSize = 14.000
+
+TextLabel_29.Parent = TRIGGERBOT_3
+TextLabel_29.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_29.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_29.Position = UDim2.new(1.44132948, 0, 0.0541914366, 0)
+TextLabel_29.Size = UDim2.new(0, 59, 0, 20)
+TextLabel_29.Font = Enum.Font.GothamBold
+TextLabel_29.Text = "INVISIBLE(Z)(X)"
+TextLabel_29.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_29.TextSize = 10.000
+
+TRIGGERBOT_4.Name = "TRIGGERBOT"
+TRIGGERBOT_4.Parent = Frame1
+TRIGGERBOT_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TRIGGERBOT_4.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_4.Position = UDim2.new(0.0881923586, 0, 0.180830479, 0)
+TRIGGERBOT_4.Size = UDim2.new(0, 30, 0, 27)
+TRIGGERBOT_4.Font = Enum.Font.GothamBold
+TRIGGERBOT_4.Text = ""
+TRIGGERBOT_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_4.TextSize = 14.000
+
+TextLabel_30.Parent = TRIGGERBOT_4
+TextLabel_30.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_30.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_30.Position = UDim2.new(1.39328516, 0, -0.0431404114, 0)
+TextLabel_30.Size = UDim2.new(0, 62, 0, 28)
+TextLabel_30.Font = Enum.Font.GothamBold
+TextLabel_30.Text = "SPINING FLYING"
+TextLabel_30.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_30.TextSize = 10.000
+
+TRIGGERBOT_5.Name = "TRIGGERBOT"
+TRIGGERBOT_5.Parent = Frame1
+TRIGGERBOT_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TRIGGERBOT_5.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_5.Position = UDim2.new(0.0881923586, 0, 0.298975646, 0)
+TRIGGERBOT_5.Size = UDim2.new(0, 30, 0, 27)
+TRIGGERBOT_5.Font = Enum.Font.GothamBold
+TRIGGERBOT_5.Text = ""
+TRIGGERBOT_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_5.TextSize = 14.000
+
+TextLabel_31.Parent = TRIGGERBOT_5
+TextLabel_31.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_31.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_31.Position = UDim2.new(1.09891355, 0, -0.117451258, 0)
+TextLabel_31.Size = UDim2.new(0, 59, 0, 28)
+TextLabel_31.Font = Enum.Font.GothamBold
+TextLabel_31.Text = "/kill name"
+TextLabel_31.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_31.TextSize = 11.000
+
+TRIGGERBOT_6.Name = "TRIGGERBOT"
+TRIGGERBOT_6.Parent = Frame1
+TRIGGERBOT_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TRIGGERBOT_6.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_6.Position = UDim2.new(0.0881923586, 0, 0.414907426, 0)
+TRIGGERBOT_6.Size = UDim2.new(0, 30, 0, 27)
+TRIGGERBOT_6.Font = Enum.Font.GothamBold
+TRIGGERBOT_6.Text = ""
+TRIGGERBOT_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_6.TextSize = 14.000
+
+TextLabel_32.Parent = TRIGGERBOT_6
+TextLabel_32.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_32.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_32.Position = UDim2.new(1.13224685, 0, -0.0531199276, 0)
+TextLabel_32.Size = UDim2.new(0, 68, 0, 28)
+TextLabel_32.Font = Enum.Font.GothamBold
+TextLabel_32.Text = "PUNCH FLYING"
+TextLabel_32.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_32.TextSize = 9.000
+
+TRIGGERBOT_7.Name = "TRIGGERBOT"
+TRIGGERBOT_7.Parent = Frame1
+TRIGGERBOT_7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TRIGGERBOT_7.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_7.Position = UDim2.new(0.0881923586, 0, 0.530066669, 0)
+TRIGGERBOT_7.Size = UDim2.new(0, 30, 0, 27)
+TRIGGERBOT_7.Font = Enum.Font.GothamBold
+TRIGGERBOT_7.Text = ""
+TRIGGERBOT_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_7.TextSize = 14.000
+
+TextLabel_33.Parent = TRIGGERBOT_7
+TextLabel_33.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_33.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_33.Position = UDim2.new(1.10828853, 0, 0.0536758155, 0)
+TextLabel_33.Size = UDim2.new(0, 50, 0, 28)
+TextLabel_33.Font = Enum.Font.GothamBold
+TextLabel_33.Text = "FIGHTER "
+TextLabel_33.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_33.TextSize = 9.000
+
+TRIGGERBOT_8.Name = "TRIGGERBOT"
+TRIGGERBOT_8.Parent = Frame1
+TRIGGERBOT_8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TRIGGERBOT_8.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_8.Position = UDim2.new(0.0881923586, 0, 0.651584208, 0)
+TRIGGERBOT_8.Size = UDim2.new(0, 30, 0, 27)
+TRIGGERBOT_8.Font = Enum.Font.GothamBold
+TRIGGERBOT_8.Text = ""
+TRIGGERBOT_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_8.TextSize = 14.000
+
+TextLabel_34.Parent = TRIGGERBOT_8
+TextLabel_34.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_34.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_34.Position = UDim2.new(1.10953987, 0, -0.0269975513, 0)
+TextLabel_34.Size = UDim2.new(0, 58, 0, 28)
+TextLabel_34.Font = Enum.Font.GothamBold
+TextLabel_34.Text = "ZEN FLYING"
+TextLabel_34.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_34.TextSize = 9.000
+
+TRIGGERBOT_9.Name = "TRIGGERBOT"
+TRIGGERBOT_9.Parent = Frame1
+TRIGGERBOT_9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TRIGGERBOT_9.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_9.Position = UDim2.new(0.0881923586, 0, 0.767902076, 0)
+TRIGGERBOT_9.Size = UDim2.new(0, 30, 0, 27)
+TRIGGERBOT_9.Font = Enum.Font.GothamBold
+TRIGGERBOT_9.Text = ""
+TRIGGERBOT_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_9.TextSize = 14.000
+
+TextLabel_35.Parent = TRIGGERBOT_9
+TextLabel_35.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_35.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_35.Position = UDim2.new(1.07620645, 0, 0.000157803297, 0)
+TextLabel_35.Size = UDim2.new(0, 58, 0, 28)
+TextLabel_35.Font = Enum.Font.GothamBold
+TextLabel_35.Text = "FLYING GUI"
+TextLabel_35.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_35.TextSize = 9.000
+
+Frame3.Name = "Frame3"
+Frame3.Parent = Frame
+Frame3.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Frame3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame3.BorderSizePixel = 2
+Frame3.Position = UDim2.new(0.388506621, 0, 1.61405146, 0)
+Frame3.Size = UDim2.new(0, 153, 0, 381)
+
+BESTDANCE.Name = "BEST DANCE"
+BESTDANCE.Parent = Frame3
+BESTDANCE.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BESTDANCE.BorderColor3 = Color3.fromRGB(255, 255, 255)
+BESTDANCE.Position = UDim2.new(0.0578208826, 0, 0.0657102615, 0)
+BESTDANCE.Size = UDim2.new(0, 30, 0, 28)
+BESTDANCE.Font = Enum.Font.GothamBold
+BESTDANCE.Text = ""
+BESTDANCE.TextColor3 = Color3.fromRGB(255, 255, 255)
+BESTDANCE.TextSize = 14.000
+
+TextLabel_36.Parent = BESTDANCE
+TextLabel_36.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_36.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_36.Position = UDim2.new(1.28671718, 0, 0.0429579876, 0)
+TextLabel_36.Size = UDim2.new(0, 68, 0, 24)
+TextLabel_36.Font = Enum.Font.GothamBold
+TextLabel_36.Text = "BEST DANCE"
+TextLabel_36.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_36.TextSize = 9.000
+
+TRIGGERBOT_10.Name = "TRIGGERBOT"
+TRIGGERBOT_10.Parent = Frame3
+TRIGGERBOT_10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TRIGGERBOT_10.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_10.Position = UDim2.new(0.0578208826, 0, 0.150112033, 0)
+TRIGGERBOT_10.Size = UDim2.new(0, 30, 0, 28)
+TRIGGERBOT_10.Font = Enum.Font.GothamBold
+TRIGGERBOT_10.Text = ""
+TRIGGERBOT_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_10.TextSize = 14.000
+
+TextLabel_37.Parent = TRIGGERBOT_10
+TextLabel_37.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_37.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_37.Position = UDim2.new(1.28671718, 0, 0.128242224, 0)
+TextLabel_37.Size = UDim2.new(0, 71, 0, 24)
+TextLabel_37.Font = Enum.Font.GothamBold
+TextLabel_37.Text = "BOGGIE DOWN"
+TextLabel_37.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_37.TextSize = 9.000
+
+CHILL.Name = "CHILL"
+CHILL.Parent = Frame3
+CHILL.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CHILL.BorderColor3 = Color3.fromRGB(255, 255, 255)
+CHILL.Position = UDim2.new(0.0578208826, 0, 0.233033061, 0)
+CHILL.Size = UDim2.new(0, 30, 0, 28)
+CHILL.Font = Enum.Font.GothamBold
+CHILL.Text = ""
+CHILL.TextColor3 = Color3.fromRGB(255, 255, 255)
+CHILL.TextSize = 14.000
+
+TextLabel_38.Parent = CHILL
+TextLabel_38.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_38.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_38.Position = UDim2.new(1.28671718, 0, 0.0908006951, 0)
+TextLabel_38.Size = UDim2.new(0, 35, 0, 21)
+TextLabel_38.Font = Enum.Font.GothamBold
+TextLabel_38.Text = "CHILL"
+TextLabel_38.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_38.TextSize = 9.000
+
+TRIGGERBOT_11.Name = "TRIGGERBOT"
+TRIGGERBOT_11.Parent = Frame3
+TRIGGERBOT_11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TRIGGERBOT_11.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_11.Position = UDim2.new(0.0578208826, 0, 0.483869374, 0)
+TRIGGERBOT_11.Size = UDim2.new(0, 30, 0, 28)
+TRIGGERBOT_11.Font = Enum.Font.GothamBold
+TRIGGERBOT_11.Text = ""
+TRIGGERBOT_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_11.TextSize = 14.000
+
+TextLabel_39.Parent = TRIGGERBOT_11
+TextLabel_39.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_39.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_39.Position = UDim2.new(1.3867172, 0, 0.100040987, 0)
+TextLabel_39.Size = UDim2.new(0, 51, 0, 24)
+TextLabel_39.Font = Enum.Font.GothamBold
+TextLabel_39.Text = "DISTRACTED"
+TextLabel_39.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_39.TextSize = 9.000
+
+TRIGGERBOT_12.Name = "TRIGGERBOT"
+TRIGGERBOT_12.Parent = Frame3
+TRIGGERBOT_12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TRIGGERBOT_12.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_12.Position = UDim2.new(0.0578208826, 0, 0.400948286, 0)
+TRIGGERBOT_12.Size = UDim2.new(0, 30, 0, 28)
+TRIGGERBOT_12.Font = Enum.Font.GothamBold
+TRIGGERBOT_12.Text = ""
+TRIGGERBOT_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_12.TextSize = 14.000
+
+TextLabel_40.Parent = TRIGGERBOT_12
+TextLabel_40.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_40.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_40.Position = UDim2.new(1.35339105, 0, 0.124437608, 0)
+TextLabel_40.Size = UDim2.new(0, 40, 0, 24)
+TextLabel_40.Font = Enum.Font.GothamBold
+TextLabel_40.Text = "DEFAULT"
+TextLabel_40.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_40.TextSize = 9.000
+
+TRIGGERBOT_13.Name = "TRIGGERBOT"
+TRIGGERBOT_13.Parent = Frame3
+TRIGGERBOT_13.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TRIGGERBOT_13.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_13.Position = UDim2.new(0.0578208826, 0, 0.315954208, 0)
+TRIGGERBOT_13.Size = UDim2.new(0, 30, 0, 28)
+TRIGGERBOT_13.Font = Enum.Font.GothamBold
+TRIGGERBOT_13.Text = ""
+TRIGGERBOT_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_13.TextSize = 14.000
+
+TextLabel_41.Parent = TRIGGERBOT_13
+TextLabel_41.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_41.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_41.Position = UDim2.new(1.28671718, 0, 0.144097462, 0)
+TextLabel_41.Size = UDim2.new(0, 45, 0, 20)
+TextLabel_41.Font = Enum.Font.GothamBold
+TextLabel_41.Text = "CRUSING"
+TextLabel_41.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_41.TextSize = 9.000
+
+TRIGGERBOT_14.Name = "TRIGGERBOT"
+TRIGGERBOT_14.Parent = Frame3
+TRIGGERBOT_14.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TRIGGERBOT_14.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_14.Position = UDim2.new(0.0578208826, 0, 0.74575603, 0)
+TRIGGERBOT_14.Size = UDim2.new(0, 30, 0, 28)
+TRIGGERBOT_14.Font = Enum.Font.GothamBold
+TRIGGERBOT_14.Text = ""
+TRIGGERBOT_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_14.TextSize = 14.000
+
+TextLabel_42.Parent = TRIGGERBOT_14
+TextLabel_42.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_42.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_42.Position = UDim2.new(1.3200556, 0, 0.0212456845, 0)
+TextLabel_42.Size = UDim2.new(0, 42, 0, 24)
+TextLabel_42.Font = Enum.Font.GothamBold
+TextLabel_42.Text = "POSES"
+TextLabel_42.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_42.TextSize = 9.000
+
+TRIGGERBOT_15.Name = "TRIGGERBOT"
+TRIGGERBOT_15.Parent = Frame3
+TRIGGERBOT_15.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TRIGGERBOT_15.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_15.Position = UDim2.new(0.0578208826, 0, 0.660210252, 0)
+TRIGGERBOT_15.Size = UDim2.new(0, 30, 0, 28)
+TRIGGERBOT_15.Font = Enum.Font.GothamBold
+TRIGGERBOT_15.Text = ""
+TRIGGERBOT_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_15.TextSize = 14.000
+
+TextLabel_43.Parent = TRIGGERBOT_15
+TextLabel_43.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_43.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_43.Position = UDim2.new(1.3200556, 0, 0.047045026, 0)
+TextLabel_43.Size = UDim2.new(0, 42, 0, 24)
+TextLabel_43.Font = Enum.Font.GothamBold
+TextLabel_43.Text = "LEVITATE"
+TextLabel_43.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_43.TextSize = 9.000
+
+TRIGGERBOT_16.Name = "TRIGGERBOT"
+TRIGGERBOT_16.Parent = Frame3
+TRIGGERBOT_16.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TRIGGERBOT_16.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_16.Position = UDim2.new(0.0578208379, 0, 0.574109316, 0)
+TRIGGERBOT_16.Size = UDim2.new(0, 30, 0, 28)
+TRIGGERBOT_16.Font = Enum.Font.GothamBold
+TRIGGERBOT_16.Text = ""
+TRIGGERBOT_16.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_16.TextSize = 14.000
+
+TextLabel_44.Parent = TRIGGERBOT_16
+TextLabel_44.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_44.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_44.Position = UDim2.new(1.28671718, 0, 0.110603876, 0)
+TextLabel_44.Size = UDim2.new(0, 42, 0, 24)
+TextLabel_44.Font = Enum.Font.GothamBold
+TextLabel_44.Text = "DOGGO"
+TextLabel_44.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_44.TextSize = 9.000
+
+TRIGGERBOT_17.Name = "TRIGGERBOT"
+TRIGGERBOT_17.Parent = Frame3
+TRIGGERBOT_17.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TRIGGERBOT_17.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_17.Position = UDim2.new(0.0578208826, 0, 0.830198526, 0)
+TRIGGERBOT_17.Size = UDim2.new(0, 30, 0, 28)
+TRIGGERBOT_17.Font = Enum.Font.GothamBold
+TRIGGERBOT_17.Text = ""
+TRIGGERBOT_17.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_17.TextSize = 14.000
+
+TextLabel_45.Parent = TRIGGERBOT_17
+TextLabel_45.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_45.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_45.Position = UDim2.new(1.38672841, 0, 0.105507985, 0)
+TextLabel_45.Size = UDim2.new(0, 64, 0, 24)
+TextLabel_45.Font = Enum.Font.GothamBold
+TextLabel_45.Text = "COOL DANCES"
+TextLabel_45.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_45.TextSize = 9.000
+
+TextLabel_46.Parent = Frame3
+TextLabel_46.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+TextLabel_46.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_46.BorderSizePixel = 3
+TextLabel_46.Position = UDim2.new(0, 0, -0.0263990276, 0)
+TextLabel_46.Size = UDim2.new(0, 153, 0, 24)
+TextLabel_46.Font = Enum.Font.GothamBold
+TextLabel_46.Text = "FE DANCES"
+TextLabel_46.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_46.TextSize = 20.000
+
+TRIGGERBOT_18.Name = "TRIGGERBOT"
+TRIGGERBOT_18.Parent = Frame3
+TRIGGERBOT_18.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TRIGGERBOT_18.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_18.Position = UDim2.new(0.0578208826, 0, 0.915459752, 0)
+TRIGGERBOT_18.Size = UDim2.new(0, 30, 0, 28)
+TRIGGERBOT_18.Font = Enum.Font.GothamBold
+TRIGGERBOT_18.Text = ""
+TRIGGERBOT_18.TextColor3 = Color3.fromRGB(255, 255, 255)
+TRIGGERBOT_18.TextSize = 14.000
+
+TextLabel_47.Parent = TRIGGERBOT_18
+TextLabel_47.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_47.BorderColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_47.Position = UDim2.new(1.35339105, 0, 0.0797991082, 0)
+TextLabel_47.Size = UDim2.new(0, 78, 0, 24)
+TextLabel_47.Font = Enum.Font.GothamBold
+TextLabel_47.Text = "ORANGE JUSTICE"
+TextLabel_47.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_47.TextSize = 9.000
+
+TextLabel_48.Parent = Frame
+TextLabel_48.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+TextLabel_48.BorderColor3 = Color3.fromRGB(61, 61, 61)
+TextLabel_48.Position = UDim2.new(0.47357294, 0, 0, 0)
+TextLabel_48.Size = UDim2.new(0, 189, 0, 23)
+TextLabel_48.Font = Enum.Font.SourceSans
+TextLabel_48.Text = ""
+TextLabel_48.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_48.TextSize = 14.000
+
+gps_fixed.Name = "gps_fixed"
+gps_fixed.Parent = TextLabel_48
+gps_fixed.BackgroundTransparency = 1.000
+gps_fixed.Position = UDim2.new(-1.22744381, 0, -0.896257818, 0)
+gps_fixed.Size = UDim2.new(0, 43, 0, 41)
+gps_fixed.ZIndex = 2
+gps_fixed.Image = "rbxassetid://3926305904"
+gps_fixed.ImageColor3 = Color3.fromRGB(255, 170, 0)
+gps_fixed.ImageRectOffset = Vector2.new(764, 44)
+gps_fixed.ImageRectSize = Vector2.new(36, 36)
+
+rotate_right.Name = "rotate_right"
+rotate_right.Parent = TextLabel_48
+rotate_right.BackgroundTransparency = 1.000
+rotate_right.BorderColor3 = Color3.fromRGB(0, 0, 0)
+rotate_right.Position = UDim2.new(-1.21064925, 0, -0.778985381, 0)
+rotate_right.Size = UDim2.new(0, 35, 0, 35)
+rotate_right.ZIndex = 2
+rotate_right.Image = "rbxassetid://3926307971"
+rotate_right.ImageColor3 = Color3.fromRGB(0, 0, 0)
+rotate_right.ImageRectOffset = Vector2.new(244, 484)
+rotate_right.ImageRectSize = Vector2.new(36, 36)
+
+TextLabel_49.Parent = TextLabel_48
+TextLabel_49.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+TextLabel_49.BorderColor3 = Color3.fromRGB(61, 61, 61)
+TextLabel_49.Position = UDim2.new(-0.581423879, 0, -0.396739125, 0)
+TextLabel_49.Size = UDim2.new(0, 39, 0, 18)
+TextLabel_49.Font = Enum.Font.GothamBold
+TextLabel_49.Text = "HUB"
+TextLabel_49.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_49.TextSize = 18.000
+
+TextLabel_50.Parent = TextLabel_48
+TextLabel_50.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+TextLabel_50.BorderColor3 = Color3.fromRGB(61, 61, 61)
+TextLabel_50.Position = UDim2.new(-0.989590704, 0, -0.396739125, 0)
+TextLabel_50.Size = UDim2.new(0, 78, 0, 18)
+TextLabel_50.Font = Enum.Font.GothamBold
+TextLabel_50.Text = "INFINITE"
+TextLabel_50.TextColor3 = Color3.fromRGB(229, 153, 0)
+TextLabel_50.TextSize = 18.000
+
+TextLabel_51.Parent = TextLabel_48
+TextLabel_51.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_51.BackgroundTransparency = 0.750
+TextLabel_51.BorderSizePixel = 0
+TextLabel_51.Position = UDim2.new(-1.24837291, 0, 0.613785148, 0)
+TextLabel_51.Size = UDim2.new(0, 495, 0, 8)
+TextLabel_51.Font = Enum.Font.SourceSans
+TextLabel_51.Text = ""
+TextLabel_51.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_51.TextScaled = true
+TextLabel_51.TextSize = 14.000
+TextLabel_51.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_51.TextWrapped = true
+
+AnimatedRainbow.Name = "Animated Rainbow"
+AnimatedRainbow.Parent = TextLabel_51
+
+-- Scripts:
+
+local function KLHDN_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/ddd/main/dddAIMHOPddd"))();
+	end)
+end
+coroutine.wrap(KLHDN_fake_script)()
+local function XBCVN_fake_script() -- FLY.LocalScript 
+	local script = Instance.new('LocalScript', FLY)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/DDDDDDD/main/FI"))();
+	end)
+	
+end
+coroutine.wrap(XBCVN_fake_script)()
+local function PTSN_fake_script() -- ANTIAFK.LocalScript 
+	local script = Instance.new('LocalScript', ANTIAFK)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/----AFK----/main/AFKK"))();
+	end)
+	
+end
+coroutine.wrap(PTSN_fake_script)()
+local function PRKVYI_fake_script() -- MUR.LocalScript 
+	local script = Instance.new('LocalScript', MUR)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ODI24/ddd/main/Murdfe"))();
+	end)
+end
+coroutine.wrap(PRKVYI_fake_script)()
+local function SKPDI_fake_script() -- FPS.LocalScript 
+	local script = Instance.new('LocalScript', FPS)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/DDDDDDD/main/NOC"))();
+	end)
+end
+coroutine.wrap(SKPDI_fake_script)()
+local function EHNY_fake_script() -- FULLBRIGHT.LocalScript 
+	local script = Instance.new('LocalScript', FULLBRIGHT)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/BRIGHT/main/FULL"))();
+	end)
+end
+coroutine.wrap(EHNY_fake_script)()
+local function SLBQ_fake_script() -- ADMIN.LocalScript 
+	local script = Instance.new('LocalScript', ADMIN)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/sssss/main/sssssssssddddddddd"))();
+	end)
+end
+coroutine.wrap(SLBQ_fake_script)()
+local function MLYQ_fake_script() -- LOGGS.LocalScript 
+	local script = Instance.new('LocalScript', LOGGS)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/--LOGGS---/main/LOGGS"))();
+	end)
+end
+coroutine.wrap(MLYQ_fake_script)()
+local function ZBXGRM_fake_script() -- NOCLIP.LocalScript 
+	local script = Instance.new('LocalScript', NOCLIP)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/NO/main/CLIP"))();
+	end)
+end
+coroutine.wrap(ZBXGRM_fake_script)()
+local function WHDSJG_fake_script() -- TRIGGERBOT.LocalScript 
+	local script = Instance.new('LocalScript', TRIGGERBOT)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/DDDDDDD/main/ddddddddddd"))();
+	end)
+end
+coroutine.wrap(WHDSJG_fake_script)()
+local function VRTX_fake_script() -- Frame_2.Script 
+	local script = Instance.new('Script', Frame_2)
+
+	local Plr = game.Players.LocalPlayer
+	
+	Plr:GetMouse().KeyDown:Connect(function(K)
+		if K == "4" then
+			script.Parent.Visible = true
+		end
+	end)
+	
+	local Plr = game.Players.LocalPlayer
+	
+	Plr:GetMouse().KeyDown:Connect(function(K)
+		if K == "5" then
+			script.Parent.Visible = false
+		end
+	end)
+end
+coroutine.wrap(VRTX_fake_script)()
+local function BCIW_fake_script() -- Aimbot.LocalScript 
+	local script = Instance.new('LocalScript', Aimbot)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/dddddddddddd/main/c"))();
+	end)
+end
+coroutine.wrap(BCIW_fake_script)()
+local function TKHS_fake_script() -- NAMESESP.LocalScript 
+	local script = Instance.new('LocalScript', NAMESESP)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/----ESP----/main/EPSda/dw"))();
+	end)
+end
+coroutine.wrap(TKHS_fake_script)()
+local function UJIX_fake_script() -- COUNTERBLOX1.LocalScript 
+	local script = Instance.new('LocalScript', COUNTERBLOX1)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/dwa/main/dfdd"))();
+	end)
+end
+coroutine.wrap(UJIX_fake_script)()
+local function ACMRMG_fake_script() -- ARSENAL.LocalScript 
+	local script = Instance.new('LocalScript', ARSENAL)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/dwa/main/dw"))();
+	end)
+end
+coroutine.wrap(ACMRMG_fake_script)()
+local function FKRMQFW_fake_script() -- GODEMODE.LocalScript 
+	local script = Instance.new('LocalScript', GODEMODE)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/-GO-/main/GOD"))();
+	end)
+end
+coroutine.wrap(FKRMQFW_fake_script)()
+local function ATUHZO_fake_script() -- TRIGGERBOT_2.LocalScript 
+	local script = Instance.new('LocalScript', TRIGGERBOT_2)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/ddd/main/SILENT"))();
+	end)
+end
+coroutine.wrap(ATUHZO_fake_script)()
+local function NBRX_fake_script() -- COUNTERBLOX.LocalScript 
+	local script = Instance.new('LocalScript', COUNTERBLOX)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/FUCK-IT/main/BEE"))();
+	end)
+end
+coroutine.wrap(NBRX_fake_script)()
+local function JFKDRQM_fake_script() -- PHANTOMFORCES1.LocalScript 
+	local script = Instance.new('LocalScript', PHANTOMFORCES1)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(""))();
+	end)
+end
+coroutine.wrap(JFKDRQM_fake_script)()
+local function VHZOYV_fake_script() -- INFJUMP.LocalScript 
+	local script = Instance.new('LocalScript', INFJUMP)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/NICEd/main/LOL"))();
+	end)
+end
+coroutine.wrap(VHZOYV_fake_script)()
+local function MXUA_fake_script() -- INVISIBLE.LocalScript 
+	local script = Instance.new('LocalScript', INVISIBLE)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/fd/main/xsc"))();
+	end)
+end
+coroutine.wrap(MXUA_fake_script)()
+local function ROMYKNS_fake_script() -- TOOL.LocalScript 
+	local script = Instance.new('LocalScript', TOOL)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/sssss/main/ccccccccccccccccccc"))();
+	end)
+end
+coroutine.wrap(ROMYKNS_fake_script)()
+local function DMJV_fake_script() -- FREECAM.LocalScript 
+	local script = Instance.new('LocalScript', FREECAM)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/FRwadw/main/dw"))();
+	end)
+end
+coroutine.wrap(DMJV_fake_script)()
+local function WBVPHXD_fake_script() -- FPS_2.LocalScript 
+	local script = Instance.new('LocalScript', FPS_2)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/dddddddddddd/main/fffffffffffffff"))();
+	end)
+end
+coroutine.wrap(WBVPHXD_fake_script)()
+local function AWKQQN_fake_script() -- PRISIONLIFE.LocalScript 
+	local script = Instance.new('LocalScript', PRISIONLIFE)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/PRISION-FUIEA/main/README.md"))();
+	end)
+end
+coroutine.wrap(AWKQQN_fake_script)()
+local function CEKWQ_fake_script() -- RADGOLLENGINE.LocalScript 
+	local script = Instance.new('LocalScript', RADGOLLENGINE)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Scripts/master/Vynixius%20Ragdoll%20Engine%20Loader"))();
+	end)
+end
+coroutine.wrap(CEKWQ_fake_script)()
+local function SEMGAXE_fake_script() -- AIMBOT.LocalScript 
+	local script = Instance.new('LocalScript', AIMBOT)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/dd/main/csdw"))();
+	end)
+end
+coroutine.wrap(SEMGAXE_fake_script)()
+local function IOYRS_fake_script() -- BONES.LocalScript 
+	local script = Instance.new('LocalScript', BONES)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/DDDDDDD/main/dddCOREGUY"))();
+	end)
+end
+coroutine.wrap(IOYRS_fake_script)()
+local function JAHBHK_fake_script() -- PHANTOMFORCES.LocalScript 
+	local script = Instance.new('LocalScript', PHANTOMFORCES)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/DDDDDDD/main/ddPHAdd"))();
+	end)
+end
+coroutine.wrap(JAHBHK_fake_script)()
+local function PEPOTQ_fake_script() -- BONES_2.LocalScript 
+	local script = Instance.new('LocalScript', BONES_2)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/ddd/main/bones"))();
+	end)
+end
+coroutine.wrap(PEPOTQ_fake_script)()
+local function GQPEM_fake_script() -- ARSENAL_2.LocalScript 
+	local script = Instance.new('LocalScript', ARSENAL_2)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/dd/main/BOFA"))();
+	end)
+end
+coroutine.wrap(GQPEM_fake_script)()
+local function XYGT_fake_script() -- TRIGGERBOT_3.LocalScript 
+	local script = Instance.new('LocalScript', TRIGGERBOT_3)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/-----FLYING-----/main/-**-FE-*-*"))();
+	end)
+end
+coroutine.wrap(XYGT_fake_script)()
+local function IUTZXFU_fake_script() -- TRIGGERBOT_4.LocalScript 
+	local script = Instance.new('LocalScript', TRIGGERBOT_4)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/ddd/main/NO%20TOOLS"))();
+	end)
+end
+coroutine.wrap(IUTZXFU_fake_script)()
+local function XEDAXSD_fake_script() -- TRIGGERBOT_5.LocalScript 
+	local script = Instance.new('LocalScript', TRIGGERBOT_5)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/wd/main/il"))();
+	end)
+end
+coroutine.wrap(XEDAXSD_fake_script)()
+local function GOME_fake_script() -- TRIGGERBOT_6.LocalScript 
+	local script = Instance.new('LocalScript', TRIGGERBOT_6)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/wd/main/Punch"))();
+	end)
+end
+coroutine.wrap(GOME_fake_script)()
+local function XPUTF_fake_script() -- TRIGGERBOT_7.LocalScript 
+	local script = Instance.new('LocalScript', TRIGGERBOT_7)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/5shVpY4s"))();
+	end)
+end
+coroutine.wrap(XPUTF_fake_script)()
+local function SQUR_fake_script() -- TRIGGERBOT_8.LocalScript 
+	local script = Instance.new('LocalScript', TRIGGERBOT_8)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/wd/main/dd"))();
+	end)
+end
+coroutine.wrap(SQUR_fake_script)()
+local function AGDWMG_fake_script() -- TRIGGERBOT_9.LocalScript 
+	local script = Instance.new('LocalScript', TRIGGERBOT_9)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/dSHYsibw"))();
+	end)
+end
+coroutine.wrap(AGDWMG_fake_script)()
+local function CGPVM_fake_script() -- Frame1.LocalScript 
+	local script = Instance.new('LocalScript', Frame1)
+
+	local Plr = game.Players.LocalPlayer
+	
+	Plr:GetMouse().KeyDown:Connect(function(K)
+		if K == "4" then
+			script.Parent.Visible = true
+		end
+	end)
+	
+	local Plr = game.Players.LocalPlayer
+	
+	Plr:GetMouse().KeyDown:Connect(function(K)
+		if K == "5" then
+			script.Parent.Visible = false
+		end
+	end)
+	
+end
+coroutine.wrap(CGPVM_fake_script)()
+local function JITS_fake_script() -- BESTDANCE.LocalScript 
+	local script = Instance.new('LocalScript', BESTDANCE)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/BESTDANBCE/main/DANCE"))();
+	end)
+end
+coroutine.wrap(JITS_fake_script)()
+local function VFMQGLC_fake_script() -- TRIGGERBOT_10.LocalScript 
+	local script = Instance.new('LocalScript', TRIGGERBOT_10)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/ddd/main/d"))();
+	end)
+end
+coroutine.wrap(VFMQGLC_fake_script)()
+local function LIFZ_fake_script() -- CHILL.LocalScript 
+	local script = Instance.new('LocalScript', CHILL)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/ddd/main/fff"))();
+	end)
+end
+coroutine.wrap(LIFZ_fake_script)()
+local function QNSHW_fake_script() -- TRIGGERBOT_11.LocalScript 
+	local script = Instance.new('LocalScript', TRIGGERBOT_11)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/ddd/main/gggg"))();
+	end)
+end
+coroutine.wrap(QNSHW_fake_script)()
+local function TAOBZ_fake_script() -- TRIGGERBOT_12.LocalScript 
+	local script = Instance.new('LocalScript', TRIGGERBOT_12)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/ddd/main/tt"))();
+	end)
+end
+coroutine.wrap(TAOBZ_fake_script)()
+local function VHGZKQJ_fake_script() -- TRIGGERBOT_13.LocalScript 
+	local script = Instance.new('LocalScript', TRIGGERBOT_13)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/ddd/main/rrrr"))();
+	end)
+end
+coroutine.wrap(VHGZKQJ_fake_script)()
+local function PHWWCKB_fake_script() -- TRIGGERBOT_14.LocalScript 
+	local script = Instance.new('LocalScript', TRIGGERBOT_14)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/ddd/main/uuuuuuuu"))();
+	end)
+end
+coroutine.wrap(PHWWCKB_fake_script)()
+local function UAZA_fake_script() -- TRIGGERBOT_15.LocalScript 
+	local script = Instance.new('LocalScript', TRIGGERBOT_15)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/ddd/main/hhh"))();
+	end)
+end
+coroutine.wrap(UAZA_fake_script)()
+local function TGIHDU_fake_script() -- TRIGGERBOT_16.LocalScript 
+	local script = Instance.new('LocalScript', TRIGGERBOT_16)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/ddd/main/Dog"))();
+	end)
+end
+coroutine.wrap(TGIHDU_fake_script)()
+local function ZRUNHB_fake_script() -- TRIGGERBOT_17.LocalScript 
+	local script = Instance.new('LocalScript', TRIGGERBOT_17)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/ddd/main/%3B%3B%3B%3B"))();
+	end)
+end
+coroutine.wrap(ZRUNHB_fake_script)()
+local function PKCE_fake_script() -- Frame3.LocalScript 
+	local script = Instance.new('LocalScript', Frame3)
+
+	local Plr = game.Players.LocalPlayer
+	
+	Plr:GetMouse().KeyDown:Connect(function(K)
+		if K == "4" then
+			script.Parent.Visible = true
+		end
+	end)
+	
+	local Plr = game.Players.LocalPlayer
+	
+	Plr:GetMouse().KeyDown:Connect(function(K)
+		if K == "5" then
+			script.Parent.Visible = false
+		end
+	end)
+end
+coroutine.wrap(PKCE_fake_script)()
+local function TDRYIV_fake_script() -- TRIGGERBOT_18.LocalScript 
+	local script = Instance.new('LocalScript', TRIGGERBOT_18)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/ddd/main/ORANGE"))();
+	end)
+end
+coroutine.wrap(TDRYIV_fake_script)()
+local function QVEBEPX_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local Drag = script.Parent.Parent.Frame
+	gsCoreGui = game:GetService("CoreGui")
+	gsTween = game:GetService("TweenService")
+	local UserInputService = game:GetService("UserInputService")
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	local function update(input)
+		local delta = input.Position - dragStart
+		local dragTime = 0.04
+		local SmoothDrag = {}
+		SmoothDrag.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		local dragSmoothFunction = gsTween:Create(Drag, TweenInfo.new(dragTime, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), SmoothDrag)
+		dragSmoothFunction:Play()
+	end
+	Drag.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = Drag.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	Drag.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging and Drag.Size then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(QVEBEPX_fake_script)()
+local function PGOIS_fake_script() -- gps_fixed.LocalScript 
+	local script = Instance.new('LocalScript', gps_fixed)
+
+	Spinny = script.Parent
+	
+	while true do
+		wait(0.01)
+		Spinny.Rotation = Spinny.Rotation +12
+	end
+end
+coroutine.wrap(PGOIS_fake_script)()
+local function WGBUXVC_fake_script() -- rotate_right.LocalScript 
+	local script = Instance.new('LocalScript', rotate_right)
+
+	Spinny = script.Parent
+	
+	while true do
+		wait(0.01)
+		Spinny.Rotation = Spinny.Rotation +6
+	end
+end
+coroutine.wrap(WGBUXVC_fake_script)()
+local function RCBF_fake_script() -- TextLabel_51.Animated Rainbow Script 
+	local script = Instance.new('LocalScript', TextLabel_51)
+
+	local RS = game:GetService("RunService")
+	
+	local rainbow = script.Parent  -- GUI object
+	local grad = script.Parent["Animated Rainbow"]
+	
+	local counter = 0       -- phase shift 
+	local w = math.pi / 12  -- frequency 
+	local CS = {}           -- colorsequence table
+	local num = 15 			-- number of colorsequence points (maxed at 15 or 16 I believe)
+	local frames = 0		-- frame counter, used to buffer if you want lower framerate updates
+	
+	RS.Heartbeat:Connect(function()
+		if math.fmod(frames, 2) == 0 then
+			for i = 0, num do
+				local c = Color3.fromRGB(127 * math.sin(w*i + counter) + 128, 127 * math.sin(w*i + 2 * math.pi/3 + counter) + 128, 127*math.sin(w*i + 4*math.pi/3 + counter) + 128)
+				table.insert(CS, i+1, ColorSequenceKeypoint.new(i/num, c))
+			end
+			grad.Color = ColorSequence.new(CS)
+			CS = {}
+			counter = counter + math.pi/40
+			if (counter >= math.pi * 2) then
+				counter = 0
+			end
+		end
+		if frames >= 1000 then
+			frames = 0
+		end
+		frames = frames + 1
+	end)
+end
+coroutine.wrap(RCBF_fake_script)()
