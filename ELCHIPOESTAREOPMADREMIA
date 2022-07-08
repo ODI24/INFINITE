@@ -1,0 +1,1540 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Intro = Instance.new("ScreenGui")
+local Backgound = Instance.new("Frame")
+local OptionsF = Instance.new("Frame")
+local GraphicButton = Instance.new("TextButton")
+local insert_emoticon = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+local ControlButton = Instance.new("TextButton")
+local person = Instance.new("ImageButton")
+local UICorner_2 = Instance.new("UICorner")
+local Controls = Instance.new("ScrollingFrame")
+local TextLabel = Instance.new("TextLabel")
+local AnimatedRainbow = Instance.new("UIGradient")
+local SPAMCHAT = Instance.new("TextButton")
+local GODEMODE = Instance.new("TextButton")
+local ESPb = Instance.new("TextButton")
+local AIMBOT = Instance.new("TextButton")
+local CMDX = Instance.new("TextButton")
+local TOWEROFHELL = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local AnimatedRainbow_2 = Instance.new("UIGradient")
+local ARSENAL = Instance.new("TextButton")
+local PHANTOMFORCES = Instance.new("TextButton")
+local SPAMCHAT_2 = Instance.new("TextButton")
+local OPFINALITY = Instance.new("TextButton")
+local WALLBANG = Instance.new("TextButton")
+local PRISIONLIFE = Instance.new("TextButton")
+local NAMESESP = Instance.new("TextButton")
+local OWLHUB = Instance.new("TextButton")
+local DARKHUB = Instance.new("TextButton")
+local NAMESESP_2 = Instance.new("TextButton")
+local LEGENDSOFSPEED = Instance.new("TextButton")
+local OWLHUB_2 = Instance.new("TextButton")
+local GODEMODE_2 = Instance.new("TextButton")
+local AIMBOT_2 = Instance.new("TextButton")
+local Graphics = Instance.new("ScrollingFrame")
+local Infintejump = Instance.new("TextButton")
+local SPAMCHAT_3 = Instance.new("TextButton")
+local SPAMCHAT_4 = Instance.new("TextButton")
+local SPAMCHAT_5 = Instance.new("TextButton")
+local SPAMCHAT_6 = Instance.new("TextButton")
+local DANCES = Instance.new("TextLabel")
+local AnimatedRainbow_3 = Instance.new("UIGradient")
+local SPAMCHAT_7 = Instance.new("TextButton")
+local GAMESENSE = Instance.new("TextButton")
+local FPSGUI = Instance.new("TextButton")
+local INVISIBLE = Instance.new("TextButton")
+local LOGGS = Instance.new("TextButton")
+local ANTIAFK = Instance.new("TextButton")
+local FPS = Instance.new("TextButton")
+local BYPASS = Instance.new("TextButton")
+local FULLBRIGHT = Instance.new("TextButton")
+local Frame = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextLabel_3 = Instance.new("TextLabel")
+local AnimatedRainbow_4 = Instance.new("UIGradient")
+local TextButton_3 = Instance.new("TextButton")
+local Volver = Instance.new("TextButton")
+local FPS_2 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local ADMINPANEL = Instance.new("TextLabel")
+local AnimatedRainbow_5 = Instance.new("UIGradient")
+local Frame_2 = Instance.new("Frame")
+local slots = Instance.new("Folder")
+local Template = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local TextLabel_5 = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
+local UICorner_5 = Instance.new("UICorner")
+local PLAYER = Instance.new("TextLabel")
+local AnimatedRainbow_6 = Instance.new("UIGradient")
+local ImageLabel = Instance.new("ImageLabel")
+
+--Properties:
+
+Intro.Name = "Intro"
+Intro.Parent = game.CoreGui
+Intro.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Intro.ResetOnSpawn = false
+
+Backgound.Name = "Backgound"
+Backgound.Parent = Intro
+Backgound.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Backgound.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Backgound.BorderSizePixel = 0
+Backgound.Position = UDim2.new(0.127159983, 0, 0.00937449746, 0)
+Backgound.Size = UDim2.new(0, 602, 0, 286)
+
+OptionsF.Name = "OptionsF"
+OptionsF.Parent = Backgound
+OptionsF.BackgroundColor3 = Color3.fromRGB(106, 106, 106)
+OptionsF.BorderSizePixel = 0
+OptionsF.Position = UDim2.new(0, -2041, 0, 0)
+OptionsF.Size = UDim2.new(0, 903, 0, 598)
+OptionsF.ZIndex = 0
+
+GraphicButton.Name = "GraphicButton"
+GraphicButton.Parent = OptionsF
+GraphicButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GraphicButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+GraphicButton.BorderSizePixel = 0
+GraphicButton.Position = UDim2.new(2.35071707, 0, 0.00660536531, 0)
+GraphicButton.Size = UDim2.new(0, 57, 0, 28)
+GraphicButton.Font = Enum.Font.GothamBold
+GraphicButton.Text = ""
+GraphicButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+GraphicButton.TextScaled = true
+GraphicButton.TextSize = 14.000
+GraphicButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+GraphicButton.TextWrapped = true
+GraphicButton.TextYAlignment = Enum.TextYAlignment.Top
+
+insert_emoticon.Name = "insert_emoticon"
+insert_emoticon.Parent = GraphicButton
+insert_emoticon.Active = false
+insert_emoticon.BackgroundTransparency = 1.000
+insert_emoticon.LayoutOrder = 11
+insert_emoticon.Position = UDim2.new(0.333333343, 0, -0.128571436, 0)
+insert_emoticon.Selectable = false
+insert_emoticon.Size = UDim2.new(0, 19, 0, 18)
+insert_emoticon.ZIndex = 2
+insert_emoticon.Image = "rbxassetid://3926305904"
+insert_emoticon.ImageColor3 = Color3.fromRGB(0, 0, 0)
+insert_emoticon.ImageRectOffset = Vector2.new(164, 484)
+insert_emoticon.ImageRectSize = Vector2.new(36, 36)
+
+UICorner.Parent = GraphicButton
+
+ControlButton.Name = "ControlButton"
+ControlButton.Parent = OptionsF
+ControlButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ControlButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+ControlButton.BorderSizePixel = 0
+ControlButton.Position = UDim2.new(2.27965593, 0, 0.00660537137, 0)
+ControlButton.Size = UDim2.new(0, 58, 0, 28)
+ControlButton.Font = Enum.Font.GothamBold
+ControlButton.Text = ""
+ControlButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+ControlButton.TextScaled = true
+ControlButton.TextSize = 14.000
+ControlButton.TextWrapped = true
+ControlButton.TextYAlignment = Enum.TextYAlignment.Top
+
+person.Name = "person"
+person.Parent = ControlButton
+person.BackgroundTransparency = 1.000
+person.Position = UDim2.new(0.310344845, 0, -0.142857149, 0)
+person.Size = UDim2.new(0, 22, 0, 19)
+person.ZIndex = 2
+person.Image = "rbxassetid://3926307971"
+person.ImageColor3 = Color3.fromRGB(0, 0, 0)
+person.ImageRectOffset = Vector2.new(884, 4)
+person.ImageRectSize = Vector2.new(36, 36)
+
+UICorner_2.Parent = ControlButton
+
+Controls.Name = "Controls"
+Controls.Parent = OptionsF
+Controls.Active = true
+Controls.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+Controls.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Controls.Position = UDim2.new(2.43026495, 0, 0.0691493601, 0)
+Controls.Size = UDim2.new(0, 438, 0, 234)
+
+TextLabel.Parent = Controls
+TextLabel.Active = true
+TextLabel.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel.Position = UDim2.new(0.30429557, 0, -0.00250836113, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.GothamBold
+TextLabel.Text = "LOCAL PLAYER"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 20.000
+
+AnimatedRainbow.Name = "Animated Rainbow"
+AnimatedRainbow.Parent = TextLabel
+
+SPAMCHAT.Name = "SPAM CHAT"
+SPAMCHAT.Parent = Controls
+SPAMCHAT.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SPAMCHAT.BorderSizePixel = 0
+SPAMCHAT.Position = UDim2.new(0.0389908515, 0, 0.0326086953, 0)
+SPAMCHAT.Size = UDim2.new(0, 93, 0, 40)
+SPAMCHAT.Font = Enum.Font.GothamBold
+SPAMCHAT.Text = "CHAT SPAM"
+SPAMCHAT.TextColor3 = Color3.fromRGB(255, 255, 255)
+SPAMCHAT.TextSize = 14.000
+
+GODEMODE.Name = "GODE MODE"
+GODEMODE.Parent = Controls
+GODEMODE.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GODEMODE.BorderSizePixel = 0
+GODEMODE.Position = UDim2.new(0.280999988, 0, 0.0326086953, 0)
+GODEMODE.Size = UDim2.new(0, 93, 0, 40)
+GODEMODE.Font = Enum.Font.GothamBold
+GODEMODE.Text = "GOD MODE"
+GODEMODE.TextColor3 = Color3.fromRGB(255, 255, 255)
+GODEMODE.TextSize = 14.000
+
+ESPb.Name = "ESP \"b\""
+ESPb.Parent = Controls
+ESPb.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ESPb.BorderSizePixel = 0
+ESPb.Position = UDim2.new(0.762735128, 0, 0.0326086953, 0)
+ESPb.Size = UDim2.new(0, 93, 0, 40)
+ESPb.Font = Enum.Font.GothamBold
+ESPb.Text = "ESP GUI"
+ESPb.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESPb.TextSize = 14.000
+
+AIMBOT.Name = "AIMBOT"
+AIMBOT.Parent = Controls
+AIMBOT.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AIMBOT.BorderSizePixel = 0
+AIMBOT.Position = UDim2.new(0.523009121, 0, 0.0326086953, 0)
+AIMBOT.Size = UDim2.new(0, 93, 0, 40)
+AIMBOT.Font = Enum.Font.GothamBold
+AIMBOT.Text = "AIMBOT GUI"
+AIMBOT.TextColor3 = Color3.fromRGB(255, 255, 255)
+AIMBOT.TextSize = 14.000
+
+CMDX.Name = "CMD-X"
+CMDX.Parent = Controls
+CMDX.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CMDX.BorderSizePixel = 0
+CMDX.Position = UDim2.new(0.525292158, 0, 0.117056854, 0)
+CMDX.Size = UDim2.new(0, 93, 0, 40)
+CMDX.Font = Enum.Font.GothamBold
+CMDX.Text = "CMD-X"
+CMDX.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMDX.TextSize = 14.000
+
+TOWEROFHELL.Name = "TOWER OF HELL"
+TOWEROFHELL.Parent = Controls
+TOWEROFHELL.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TOWEROFHELL.BorderSizePixel = 0
+TOWEROFHELL.Position = UDim2.new(0.671410978, 0, 0.273875892, 0)
+TOWEROFHELL.Size = UDim2.new(0, 133, 0, 40)
+TOWEROFHELL.Font = Enum.Font.GothamBold
+TOWEROFHELL.Text = "TOWER OF HELL"
+TOWEROFHELL.TextColor3 = Color3.fromRGB(255, 255, 255)
+TOWEROFHELL.TextSize = 14.000
+
+TextLabel_2.Parent = Controls
+TextLabel_2.Active = true
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_2.Position = UDim2.new(0.281464517, 0, 0.198160544, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_2.Font = Enum.Font.GothamBold
+TextLabel_2.Text = "GAMES"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 20.000
+
+AnimatedRainbow_2.Name = "Animated Rainbow"
+AnimatedRainbow_2.Parent = TextLabel_2
+
+ARSENAL.Name = "ARSENAL"
+ARSENAL.Parent = Controls
+ARSENAL.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ARSENAL.BorderSizePixel = 0
+ARSENAL.Position = UDim2.new(0.0686712265, 0, 0.229933113, 0)
+ARSENAL.Size = UDim2.new(0, 93, 0, 40)
+ARSENAL.Font = Enum.Font.GothamBold
+ARSENAL.Text = "ARSENAL"
+ARSENAL.TextColor3 = Color3.fromRGB(255, 255, 255)
+ARSENAL.TextSize = 14.000
+
+PHANTOMFORCES.Name = "PHANTOM FORCES"
+PHANTOMFORCES.Parent = Controls
+PHANTOMFORCES.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PHANTOMFORCES.BorderSizePixel = 0
+PHANTOMFORCES.Position = UDim2.new(0.340360761, 0, 0.229561508, 0)
+PHANTOMFORCES.Size = UDim2.new(0, 133, 0, 40)
+PHANTOMFORCES.Font = Enum.Font.GothamBold
+PHANTOMFORCES.Text = "PHANTOM FORCES"
+PHANTOMFORCES.TextColor3 = Color3.fromRGB(255, 255, 255)
+PHANTOMFORCES.TextSize = 14.000
+
+SPAMCHAT_2.Name = "SPAM CHAT"
+SPAMCHAT_2.Parent = Controls
+SPAMCHAT_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SPAMCHAT_2.BorderSizePixel = 0
+SPAMCHAT_2.Position = UDim2.new(0.0389908515, 0, 0.0760869533, 0)
+SPAMCHAT_2.Size = UDim2.new(0, 93, 0, 40)
+SPAMCHAT_2.Font = Enum.Font.GothamBold
+SPAMCHAT_2.Text = "AIMBOT FOV"
+SPAMCHAT_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SPAMCHAT_2.TextSize = 14.000
+
+OPFINALITY.Name = "OP FINALITY"
+OPFINALITY.Parent = Controls
+OPFINALITY.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+OPFINALITY.BorderSizePixel = 0
+OPFINALITY.Position = UDim2.new(0.0389908515, 0, 0.117056854, 0)
+OPFINALITY.Size = UDim2.new(0, 93, 0, 40)
+OPFINALITY.Font = Enum.Font.GothamBold
+OPFINALITY.Text = "OP FINALITY"
+OPFINALITY.TextColor3 = Color3.fromRGB(255, 255, 255)
+OPFINALITY.TextSize = 14.000
+
+WALLBANG.Name = "WALLBANG"
+WALLBANG.Parent = Controls
+WALLBANG.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+WALLBANG.BorderSizePixel = 0
+WALLBANG.Position = UDim2.new(0.283283085, 0, 0.117056854, 0)
+WALLBANG.Size = UDim2.new(0, 93, 0, 40)
+WALLBANG.Font = Enum.Font.GothamBold
+WALLBANG.Text = "WALLBANG"
+WALLBANG.TextColor3 = Color3.fromRGB(255, 255, 255)
+WALLBANG.TextSize = 14.000
+
+PRISIONLIFE.Name = "PRISION LIFE"
+PRISIONLIFE.Parent = Controls
+PRISIONLIFE.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PRISIONLIFE.BorderSizePixel = 0
+PRISIONLIFE.Position = UDim2.new(0.671410978, 0, 0.229561508, 0)
+PRISIONLIFE.Size = UDim2.new(0, 133, 0, 40)
+PRISIONLIFE.Font = Enum.Font.GothamBold
+PRISIONLIFE.Text = "PRISION LIFE"
+PRISIONLIFE.TextColor3 = Color3.fromRGB(255, 255, 255)
+PRISIONLIFE.TextSize = 14.000
+
+NAMESESP.Name = "NAMES ESP"
+NAMESESP.Parent = Controls
+NAMESESP.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+NAMESESP.BorderSizePixel = 0
+NAMESESP.Position = UDim2.new(0.762735128, 0, 0.0760869533, 0)
+NAMESESP.Size = UDim2.new(0, 93, 0, 40)
+NAMESESP.Font = Enum.Font.GothamBold
+NAMESESP.Text = "BONE ESP"
+NAMESESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+NAMESESP.TextSize = 14.000
+
+OWLHUB.Name = "OWL HUB"
+OWLHUB.Parent = Controls
+OWLHUB.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+OWLHUB.BorderSizePixel = 0
+OWLHUB.Position = UDim2.new(0.762735128, 0, 0.117056854, 0)
+OWLHUB.Size = UDim2.new(0, 93, 0, 40)
+OWLHUB.Font = Enum.Font.GothamBold
+OWLHUB.Text = "OWL HUB"
+OWLHUB.TextColor3 = Color3.fromRGB(255, 255, 255)
+OWLHUB.TextSize = 14.000
+
+DARKHUB.Name = "DARK HUB"
+DARKHUB.Parent = Controls
+DARKHUB.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DARKHUB.BorderSizePixel = 0
+DARKHUB.Position = UDim2.new(0.0389907956, 0, 0.156354517, 0)
+DARKHUB.Size = UDim2.new(0, 93, 0, 40)
+DARKHUB.Font = Enum.Font.GothamBold
+DARKHUB.Text = "DARK HUB"
+DARKHUB.TextColor3 = Color3.fromRGB(255, 255, 255)
+DARKHUB.TextSize = 14.000
+
+NAMESESP_2.Name = "NAMES ESP"
+NAMESESP_2.Parent = Controls
+NAMESESP_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+NAMESESP_2.BorderSizePixel = 0
+NAMESESP_2.Position = UDim2.new(0.0686712265, 0, 0.274247497, 0)
+NAMESESP_2.Size = UDim2.new(0, 93, 0, 40)
+NAMESESP_2.Font = Enum.Font.GothamBold
+NAMESESP_2.Text = "BAD BUISNESS"
+NAMESESP_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+NAMESESP_2.TextSize = 14.000
+
+LEGENDSOFSPEED.Name = "LEGENDS OF SPEED"
+LEGENDSOFSPEED.Parent = Controls
+LEGENDSOFSPEED.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LEGENDSOFSPEED.BorderSizePixel = 0
+LEGENDSOFSPEED.Position = UDim2.new(0.340360761, 0, 0.273875892, 0)
+LEGENDSOFSPEED.Size = UDim2.new(0, 133, 0, 40)
+LEGENDSOFSPEED.Font = Enum.Font.GothamBold
+LEGENDSOFSPEED.Text = "LEGENDS OF SPEED"
+LEGENDSOFSPEED.TextColor3 = Color3.fromRGB(255, 255, 255)
+LEGENDSOFSPEED.TextSize = 14.000
+
+OWLHUB_2.Name = "OWL HUB"
+OWLHUB_2.Parent = Controls
+OWLHUB_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+OWLHUB_2.BorderSizePixel = 0
+OWLHUB_2.Position = UDim2.new(0.760452032, 0, 0.156354517, 0)
+OWLHUB_2.Size = UDim2.new(0, 93, 0, 40)
+OWLHUB_2.Font = Enum.Font.GothamBold
+OWLHUB_2.Text = "TOPK3K"
+OWLHUB_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+OWLHUB_2.TextSize = 14.000
+
+GODEMODE_2.Name = "GODE MODE"
+GODEMODE_2.Parent = Controls
+GODEMODE_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GODEMODE_2.BorderSizePixel = 0
+GODEMODE_2.Position = UDim2.new(0.283283085, 0, 0.0760869533, 0)
+GODEMODE_2.Size = UDim2.new(0, 93, 0, 40)
+GODEMODE_2.Font = Enum.Font.GothamBold
+GODEMODE_2.Text = "SILENT AIM1"
+GODEMODE_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+GODEMODE_2.TextSize = 14.000
+
+AIMBOT_2.Name = "AIMBOT"
+AIMBOT_2.Parent = Controls
+AIMBOT_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AIMBOT_2.BorderSizePixel = 0
+AIMBOT_2.Position = UDim2.new(0.525292218, 0, 0.0760869533, 0)
+AIMBOT_2.Size = UDim2.new(0, 93, 0, 40)
+AIMBOT_2.Font = Enum.Font.GothamBold
+AIMBOT_2.Text = "SILENTAIM2"
+AIMBOT_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+AIMBOT_2.TextSize = 14.000
+
+Graphics.Name = "Graphics"
+Graphics.Parent = OptionsF
+Graphics.Active = true
+Graphics.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+Graphics.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Graphics.Position = UDim2.new(2.4295373, 0, 0.0706721321, 0)
+Graphics.Size = UDim2.new(0, 438, 0, 226)
+
+Infintejump.Name = "Infintejump"
+Infintejump.Parent = Graphics
+Infintejump.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Infintejump.BorderSizePixel = 0
+Infintejump.Position = UDim2.new(0.0138766952, 0, 0.0434782617, 0)
+Infintejump.Size = UDim2.new(0, 93, 0, 40)
+Infintejump.Font = Enum.Font.GothamBold
+Infintejump.Text = "INF JUMP"
+Infintejump.TextColor3 = Color3.fromRGB(255, 255, 255)
+Infintejump.TextSize = 14.000
+
+SPAMCHAT_3.Name = "SPAM CHAT"
+SPAMCHAT_3.Parent = Graphics
+SPAMCHAT_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SPAMCHAT_3.BorderSizePixel = 0
+SPAMCHAT_3.Position = UDim2.new(0.258168936, 0, 0.0434782617, 0)
+SPAMCHAT_3.Size = UDim2.new(0, 93, 0, 40)
+SPAMCHAT_3.Font = Enum.Font.GothamBold
+SPAMCHAT_3.Text = "BODY ESP"
+SPAMCHAT_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+SPAMCHAT_3.TextSize = 14.000
+
+SPAMCHAT_4.Name = "SPAM CHAT"
+SPAMCHAT_4.Parent = Graphics
+SPAMCHAT_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SPAMCHAT_4.BorderSizePixel = 0
+SPAMCHAT_4.Position = UDim2.new(0.51159358, 0, 0.0434782617, 0)
+SPAMCHAT_4.Size = UDim2.new(0, 93, 0, 40)
+SPAMCHAT_4.Font = Enum.Font.GothamBold
+SPAMCHAT_4.Text = "REVIZ ADMIN"
+SPAMCHAT_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+SPAMCHAT_4.TextSize = 14.000
+
+SPAMCHAT_5.Name = "SPAM CHAT"
+SPAMCHAT_5.Parent = Graphics
+SPAMCHAT_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SPAMCHAT_5.BorderSizePixel = 0
+SPAMCHAT_5.Position = UDim2.new(0.760451972, 0, 0.0434782617, 0)
+SPAMCHAT_5.Size = UDim2.new(0, 93, 0, 40)
+SPAMCHAT_5.Font = Enum.Font.GothamBold
+SPAMCHAT_5.Text = "INFINITE V1"
+SPAMCHAT_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+SPAMCHAT_5.TextSize = 14.000
+
+SPAMCHAT_6.Name = "SPAM CHAT"
+SPAMCHAT_6.Parent = Graphics
+SPAMCHAT_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SPAMCHAT_6.BorderSizePixel = 0
+SPAMCHAT_6.Position = UDim2.new(0.0138766952, 0, 0.0861203969, 0)
+SPAMCHAT_6.Size = UDim2.new(0, 93, 0, 40)
+SPAMCHAT_6.Font = Enum.Font.GothamBold
+SPAMCHAT_6.Text = "INFINITE V2"
+SPAMCHAT_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+SPAMCHAT_6.TextSize = 14.000
+
+DANCES.Name = "DANCES"
+DANCES.Parent = Graphics
+DANCES.Active = true
+DANCES.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+DANCES.BorderColor3 = Color3.fromRGB(27, 42, 53)
+DANCES.Position = UDim2.new(0.30399999, 0, -0.00383612048, 0)
+DANCES.Size = UDim2.new(0, 200, 0, 50)
+DANCES.Font = Enum.Font.GothamBold
+DANCES.Text = "Minerscave 1.5"
+DANCES.TextColor3 = Color3.fromRGB(255, 255, 255)
+DANCES.TextSize = 20.000
+DANCES.TextWrapped = true
+
+AnimatedRainbow_3.Name = "Animated Rainbow"
+AnimatedRainbow_3.Parent = DANCES
+
+SPAMCHAT_7.Name = "SPAM CHAT"
+SPAMCHAT_7.Parent = Graphics
+SPAMCHAT_7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SPAMCHAT_7.BorderSizePixel = 0
+SPAMCHAT_7.Position = UDim2.new(0.258168995, 0, 0.085350886, 0)
+SPAMCHAT_7.Size = UDim2.new(0, 111, 0, 40)
+SPAMCHAT_7.Font = Enum.Font.GothamBold
+SPAMCHAT_7.Text = "MINERALS ESP"
+SPAMCHAT_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+SPAMCHAT_7.TextSize = 14.000
+
+GAMESENSE.Name = "GAME SENSE"
+GAMESENSE.Parent = OptionsF
+GAMESENSE.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+GAMESENSE.BorderColor3 = Color3.fromRGB(27, 42, 53)
+GAMESENSE.BorderSizePixel = 0
+GAMESENSE.Position = UDim2.new(2.27965593, 0, 0.063461557, 0)
+GAMESENSE.Size = UDim2.new(0, 120, 0, 17)
+GAMESENSE.Font = Enum.Font.GothamBold
+GAMESENSE.Text = "GAME SENSE"
+GAMESENSE.TextColor3 = Color3.fromRGB(255, 255, 255)
+GAMESENSE.TextSize = 14.000
+
+FPSGUI.Name = "FPS GUI"
+FPSGUI.Parent = OptionsF
+FPSGUI.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+FPSGUI.BorderSizePixel = 0
+FPSGUI.Position = UDim2.new(2.27854848, 0, 0.105267614, 0)
+FPSGUI.Size = UDim2.new(0, 122, 0, 17)
+FPSGUI.Font = Enum.Font.GothamBold
+FPSGUI.Text = "FPS GUI"
+FPSGUI.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPSGUI.TextSize = 14.000
+
+INVISIBLE.Name = "INVISIBLE"
+INVISIBLE.Parent = OptionsF
+INVISIBLE.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+INVISIBLE.BorderSizePixel = 0
+INVISIBLE.Position = UDim2.new(2.27744102, 0, 0.147073597, 0)
+INVISIBLE.Size = UDim2.new(0, 59, 0, 22)
+INVISIBLE.Font = Enum.Font.GothamBold
+INVISIBLE.Text = "INVISIBLE"
+INVISIBLE.TextColor3 = Color3.fromRGB(255, 255, 255)
+INVISIBLE.TextScaled = true
+INVISIBLE.TextSize = 12.000
+INVISIBLE.TextWrapped = true
+
+LOGGS.Name = "LOGGS"
+LOGGS.Parent = OptionsF
+LOGGS.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+LOGGS.BorderSizePixel = 0
+LOGGS.Position = UDim2.new(2.3472085, 0, 0.147073597, 0)
+LOGGS.Size = UDim2.new(0, 59, 0, 22)
+LOGGS.Font = Enum.Font.GothamBold
+LOGGS.Text = "LOGGS"
+LOGGS.TextColor3 = Color3.fromRGB(255, 255, 255)
+LOGGS.TextSize = 14.000
+
+ANTIAFK.Name = "ANTI AFK"
+ANTIAFK.Parent = OptionsF
+ANTIAFK.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+ANTIAFK.BorderSizePixel = 0
+ANTIAFK.Position = UDim2.new(2.3472085, 0, 0.237374574, 0)
+ANTIAFK.Size = UDim2.new(0, 59, 0, 22)
+ANTIAFK.Font = Enum.Font.GothamBold
+ANTIAFK.Text = "ANTI AFK"
+ANTIAFK.TextColor3 = Color3.fromRGB(255, 255, 255)
+ANTIAFK.TextSize = 12.000
+
+FPS.Name = "FPS"
+FPS.Parent = OptionsF
+FPS.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+FPS.BorderSizePixel = 0
+FPS.Position = UDim2.new(2.27744102, 0, 0.198913068, 0)
+FPS.Size = UDim2.new(0, 59, 0, 15)
+FPS.Font = Enum.Font.GothamBold
+FPS.Text = "+ FPS"
+FPS.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPS.TextSize = 14.000
+
+BYPASS.Name = "BYPASS"
+BYPASS.Parent = OptionsF
+BYPASS.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+BYPASS.BorderSizePixel = 0
+BYPASS.Position = UDim2.new(2.27744102, 0, 0.235702366, 0)
+BYPASS.Size = UDim2.new(0, 59, 0, 23)
+BYPASS.Font = Enum.Font.GothamBold
+BYPASS.Text = "SPEED"
+BYPASS.TextColor3 = Color3.fromRGB(255, 255, 255)
+BYPASS.TextSize = 12.000
+BYPASS.TextWrapped = true
+
+FULLBRIGHT.Name = "FULLBRIGHT"
+FULLBRIGHT.Parent = OptionsF
+FULLBRIGHT.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+FULLBRIGHT.BorderSizePixel = 0
+FULLBRIGHT.Position = UDim2.new(2.3472085, 0, 0.198913068, 0)
+FULLBRIGHT.Size = UDim2.new(0, 59, 0, 15)
+FULLBRIGHT.Font = Enum.Font.GothamBold
+FULLBRIGHT.Text = "BRIGHT"
+FULLBRIGHT.TextColor3 = Color3.fromRGB(255, 255, 255)
+FULLBRIGHT.TextSize = 14.000
+
+Frame.Parent = OptionsF
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(2.93784308, 0, 0.0617893934, 0)
+Frame.Size = UDim2.new(0.120850451, 0, 0.198996738, 0)
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.104849182, 0, 0.193527013, 0)
+TextButton.Size = UDim2.new(0.734308481, 0, 0.235073686, 0)
+TextButton.Font = Enum.Font.GothamBlack
+TextButton.Text = "90 "
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 20.000
+TextButton.TextWrapped = true
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+TextButton_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0.104849182, 0, 0.428600758, 0)
+TextButton_2.Size = UDim2.new(0.734308481, 0, 0.243667901, 0)
+TextButton_2.Font = Enum.Font.GothamBlack
+TextButton_2.Text = "100 "
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextSize = 20.000
+TextButton_2.TextWrapped = true
+
+TextLabel_3.Parent = Frame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_3.BorderSizePixel = 6
+TextLabel_3.Position = UDim2.new(0.0161264073, 0, -0.252100736, 0)
+TextLabel_3.Size = UDim2.new(0, 107, 0, 36)
+TextLabel_3.Font = Enum.Font.GothamBold
+TextLabel_3.Text = "FOV"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 19.000
+TextLabel_3.TextWrapped = true
+
+AnimatedRainbow_4.Name = "Animated Rainbow"
+AnimatedRainbow_4.Parent = TextLabel_3
+
+TextButton_3.Parent = Frame
+TextButton_3.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+TextButton_3.BorderSizePixel = 0
+TextButton_3.Position = UDim2.new(0.104849182, 0, 0.668096066, 0)
+TextButton_3.Size = UDim2.new(0.734308481, 0, 0.209225565, 0)
+TextButton_3.Font = Enum.Font.GothamBlack
+TextButton_3.Text = "120 "
+TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.TextSize = 20.000
+TextButton_3.TextWrapped = true
+
+Volver.Name = "Volver"
+Volver.Parent = Backgound
+Volver.BackgroundColor3 = Color3.fromRGB(105, 255, 198)
+Volver.BorderSizePixel = 0
+Volver.Position = UDim2.new(0, 20, 0, 480)
+Volver.Size = UDim2.new(0, 200, 0, 50)
+Volver.Visible = false
+Volver.Font = Enum.Font.Cartoon
+Volver.Text = "Volver"
+Volver.TextColor3 = Color3.fromRGB(0, 0, 0)
+Volver.TextScaled = true
+Volver.TextSize = 14.000
+Volver.TextWrapped = true
+
+FPS_2.Name = "FPS"
+FPS_2.Parent = Backgound
+FPS_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FPS_2.BackgroundTransparency = 1.000
+FPS_2.Position = UDim2.new(0.838296294, 0, 0.151577935, -40)
+FPS_2.Size = UDim2.new(0, 44, 0, 38)
+FPS_2.Font = Enum.Font.LuckiestGuy
+FPS_2.Text = "FPS"
+FPS_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPS_2.TextSize = 20.000
+FPS_2.TextStrokeTransparency = 0.000
+
+TextLabel_4.Parent = Backgound
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.Position = UDim2.new(0.764017105, 0, 0.031468533, 0)
+TextLabel_4.Size = UDim2.new(0, 44, 0, 22)
+TextLabel_4.Text = "FPS:"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 14.000
+
+ADMINPANEL.Name = "ADMIN PANEL"
+ADMINPANEL.Parent = Backgound
+ADMINPANEL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ADMINPANEL.BackgroundTransparency = 1.000
+ADMINPANEL.BorderSizePixel = 0
+ADMINPANEL.Position = UDim2.new(0.379771709, 0, -0.0211685821, 0)
+ADMINPANEL.Size = UDim2.new(0, 200, 0, 54)
+ADMINPANEL.Font = Enum.Font.GothamBold
+ADMINPANEL.Text = "ADMIN PANEL"
+ADMINPANEL.TextColor3 = Color3.fromRGB(255, 255, 255)
+ADMINPANEL.TextScaled = true
+ADMINPANEL.TextSize = 14.000
+ADMINPANEL.TextWrapped = true
+
+AnimatedRainbow_5.Name = "Animated Rainbow"
+AnimatedRainbow_5.Parent = ADMINPANEL
+
+Frame_2.Parent = Backgound
+Frame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.Position = UDim2.new(-0.268437207, 0, 0.00330694229, 0)
+Frame_2.Size = UDim2.new(0, 159, 0, 452)
+
+slots.Name = "slots"
+slots.Parent = Frame_2
+
+Template.Name = "Template"
+Template.Parent = Frame_2
+Template.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Template.BackgroundTransparency = 0.300
+Template.BorderColor3 = Color3.fromRGB(72, 72, 72)
+Template.BorderSizePixel = 0
+Template.Position = UDim2.new(0.00531910826, 0, 0, 0)
+Template.Size = UDim2.new(0.994680941, 0, 0.0125556942, 25)
+Template.Font = Enum.Font.GothamBold
+Template.TextColor3 = Color3.fromRGB(255, 255, 255)
+Template.TextSize = 14.000
+
+UICorner_3.Parent = Template
+
+TextLabel_5.Parent = Frame_2
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(-4.79836118e-08, 0, -0.00124195823, 0)
+TextLabel_5.Size = UDim2.new(0.999637127, 0, -0.00538585475, 25)
+TextLabel_5.Font = Enum.Font.GothamBold
+TextLabel_5.Text = ""
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 30.000
+
+UICorner_4.Parent = TextLabel_5
+
+UICorner_5.Parent = Frame_2
+
+PLAYER.Name = "PLAYER"
+PLAYER.Parent = Backgound
+PLAYER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PLAYER.BackgroundTransparency = 1.000
+PLAYER.BorderSizePixel = 0
+PLAYER.Position = UDim2.new(-0.293300301, 0, 0.00330694951, 0)
+PLAYER.Size = UDim2.new(0, 174, 0, 40)
+PLAYER.Font = Enum.Font.GothamBold
+PLAYER.Text = "PLAYERS"
+PLAYER.TextColor3 = Color3.fromRGB(255, 255, 255)
+PLAYER.TextSize = 30.000
+PLAYER.TextWrapped = true
+
+AnimatedRainbow_6.Name = "Animated Rainbow"
+AnimatedRainbow_6.Parent = PLAYER
+
+ImageLabel.Parent = Backgound
+ImageLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.Position = UDim2.new(0.0505629778, 0, 0.623475432, 0)
+ImageLabel.Size = UDim2.new(0, 93, 0, 90)
+ImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+-- Scripts:
+
+local function UFJKR_fake_script() -- GraphicButton.LocalScript 
+	local script = Instance.new('LocalScript', GraphicButton)
+
+	local controls = script.Parent.Parent.Controls
+	local graphics = script.Parent.Parent.Graphics
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		graphics.Visible = true 
+		controls.Visible = false 
+	end)
+end
+coroutine.wrap(UFJKR_fake_script)()
+local function IYLJ_fake_script() -- ControlButton.LocalScript 
+	local script = Instance.new('LocalScript', ControlButton)
+
+	local graphics = script.Parent.Parent.Graphics
+	local controls = script.Parent.Parent.Controls
+	
+	script.Parent.MouseButton1Click:Connect(function()
+			controls.Visible = true
+			graphics.Visible = false 
+	end)
+end
+coroutine.wrap(IYLJ_fake_script)()
+local function SMRCS_fake_script() -- TextLabel.Animated Rainbow Script 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	local RS = game:GetService("RunService")
+	
+	local rainbow = script.Parent  -- GUI object
+	local grad = script.Parent["Animated Rainbow"]
+	
+	local counter = 0       -- phase shift 
+	local w = math.pi / 12  -- frequency 
+	local CS = {}           -- colorsequence table
+	local num = 15 			-- number of colorsequence points (maxed at 15 or 16 I believe)
+	local frames = 0		-- frame counter, used to buffer if you want lower framerate updates
+	
+	RS.Heartbeat:Connect(function()
+		if math.fmod(frames, 2) == 0 then
+			for i = 0, num do
+				local c = Color3.fromRGB(127 * math.sin(w*i + counter) + 128, 127 * math.sin(w*i + 2 * math.pi/3 + counter) + 128, 127*math.sin(w*i + 4*math.pi/3 + counter) + 128)
+				table.insert(CS, i+1, ColorSequenceKeypoint.new(i/num, c))
+			end
+			grad.Color = ColorSequence.new(CS)
+			CS = {}
+			counter = counter + math.pi/40
+			if (counter >= math.pi * 2) then
+				counter = 0
+			end
+		end
+		if frames >= 1000 then
+			frames = 0
+		end
+		frames = frames + 1
+	end)
+end
+coroutine.wrap(SMRCS_fake_script)()
+local function VNSFWVY_fake_script() -- SPAMCHAT.LocalScript 
+	local script = Instance.new('LocalScript', SPAMCHAT)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/---SPAM--/main/*-*-*-*-"))();
+	end)
+end
+coroutine.wrap(VNSFWVY_fake_script)()
+local function MGUWR_fake_script() -- GODEMODE.LocalScript 
+	local script = Instance.new('LocalScript', GODEMODE)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/-GO-/main/GOD"))();
+	end)
+end
+coroutine.wrap(MGUWR_fake_script)()
+local function BHWF_fake_script() -- ESPb.LocalScript 
+	local script = Instance.new('LocalScript', ESPb)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/dddddddddddd/main/fffffffffffffff"))();
+	end)
+end
+coroutine.wrap(BHWF_fake_script)()
+local function ZHJQOQD_fake_script() -- AIMBOT.LocalScript 
+	local script = Instance.new('LocalScript', AIMBOT)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/dd/main/csdw"))();
+	end)
+end
+coroutine.wrap(ZHJQOQD_fake_script)()
+local function XABQJ_fake_script() -- CMDX.LocalScript 
+	local script = Instance.new('LocalScript', CMDX)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/tzTXmYf2"))();
+	end)
+end
+coroutine.wrap(XABQJ_fake_script)()
+local function XBFQS_fake_script() -- TOWEROFHELL.LocalScript 
+	local script = Instance.new('LocalScript', TOWEROFHELL)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/TOWER/main/HELL"))();
+	end)
+end
+coroutine.wrap(XBFQS_fake_script)()
+local function ETOZKT_fake_script() -- TextLabel_2.Animated Rainbow Script 
+	local script = Instance.new('LocalScript', TextLabel_2)
+
+	local RS = game:GetService("RunService")
+	
+	local rainbow = script.Parent  -- GUI object
+	local grad = script.Parent["Animated Rainbow"]
+	
+	local counter = 0       -- phase shift 
+	local w = math.pi / 12  -- frequency 
+	local CS = {}           -- colorsequence table
+	local num = 15 			-- number of colorsequence points (maxed at 15 or 16 I believe)
+	local frames = 0		-- frame counter, used to buffer if you want lower framerate updates
+	
+	RS.Heartbeat:Connect(function()
+		if math.fmod(frames, 2) == 0 then
+			for i = 0, num do
+				local c = Color3.fromRGB(127 * math.sin(w*i + counter) + 128, 127 * math.sin(w*i + 2 * math.pi/3 + counter) + 128, 127*math.sin(w*i + 4*math.pi/3 + counter) + 128)
+				table.insert(CS, i+1, ColorSequenceKeypoint.new(i/num, c))
+			end
+			grad.Color = ColorSequence.new(CS)
+			CS = {}
+			counter = counter + math.pi/40
+			if (counter >= math.pi * 2) then
+				counter = 0
+			end
+		end
+		if frames >= 1000 then
+			frames = 0
+		end
+		frames = frames + 1
+	end)
+end
+coroutine.wrap(ETOZKT_fake_script)()
+local function ZNZLJL_fake_script() -- ARSENAL.LocalScript 
+	local script = Instance.new('LocalScript', ARSENAL)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/ARSBEA/main/ANES"))();
+	end)
+end
+coroutine.wrap(ZNZLJL_fake_script)()
+local function IJQAT_fake_script() -- PHANTOMFORCES.LocalScript 
+	local script = Instance.new('LocalScript', PHANTOMFORCES)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/PHANTOM-FORT/main/FAGA"))();
+	end)
+end
+coroutine.wrap(IJQAT_fake_script)()
+local function YGXEA_fake_script() -- SPAMCHAT_2.LocalScript 
+	local script = Instance.new('LocalScript', SPAMCHAT_2)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/dddddddddddd/main/ddddddd"))();
+	end)
+end
+coroutine.wrap(YGXEA_fake_script)()
+local function KXTD_fake_script() -- OPFINALITY.LocalScript 
+	local script = Instance.new('LocalScript', OPFINALITY)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/OPFINALITY/main/FINILTY"))();
+	end)
+end
+coroutine.wrap(KXTD_fake_script)()
+local function MYHZJ_fake_script() -- WALLBANG.LocalScript 
+	local script = Instance.new('LocalScript', WALLBANG)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/WALLBNAG/main/WALL"))();
+	end)
+end
+coroutine.wrap(MYHZJ_fake_script)()
+local function JGGWOHZ_fake_script() -- PRISIONLIFE.LocalScript 
+	local script = Instance.new('LocalScript', PRISIONLIFE)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/PRISION-FUIEA/main/README.md"))();
+	end)
+end
+coroutine.wrap(JGGWOHZ_fake_script)()
+local function PJQH_fake_script() -- NAMESESP.LocalScript 
+	local script = Instance.new('LocalScript', NAMESESP)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/ddd/main/bones"))();
+	end)
+end
+coroutine.wrap(PJQH_fake_script)()
+local function RLJTXCK_fake_script() -- OWLHUB.LocalScript 
+	local script = Instance.new('LocalScript', OWLHUB)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ZinityDrops/OwlHubLink/master/OwlHubBack.lua"))();
+	end)
+end
+coroutine.wrap(RLJTXCK_fake_script)()
+local function TJRAESP_fake_script() -- DARKHUB.LocalScript 
+	local script = Instance.new('LocalScript', DARKHUB)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://darkhub.xyz/remote-script.lua"))();
+	end)
+end
+coroutine.wrap(TJRAESP_fake_script)()
+local function GDMDFAG_fake_script() -- NAMESESP_2.LocalScript 
+	local script = Instance.new('LocalScript', NAMESESP_2)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://darkhub.xyz/remote-script.lua"))();
+	end)
+end
+coroutine.wrap(GDMDFAG_fake_script)()
+local function KJQMH_fake_script() -- LEGENDSOFSPEED.LocalScript 
+	local script = Instance.new('LocalScript', LEGENDSOFSPEED)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://darkhub.xyz/remote-script.lua"))();
+	end)
+end
+coroutine.wrap(KJQMH_fake_script)()
+local function MBSCJP_fake_script() -- OWLHUB_2.LocalScript 
+	local script = Instance.new('LocalScript', OWLHUB_2)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/TOPKE/main/K3k"))();
+	end)
+end
+coroutine.wrap(MBSCJP_fake_script)()
+local function XBBALQ_fake_script() -- GODEMODE_2.LocalScript 
+	local script = Instance.new('LocalScript', GODEMODE_2)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/INFINITE/main/SILENT%20AIM%202"))();
+	end)
+end
+coroutine.wrap(XBBALQ_fake_script)()
+local function HYMTKWY_fake_script() -- AIMBOT_2.LocalScript 
+	local script = Instance.new('LocalScript', AIMBOT_2)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/SPCHAT/main/SIELNT%20AIM"))();
+	end)
+end
+coroutine.wrap(HYMTKWY_fake_script)()
+local function RIYDQO_fake_script() -- Infintejump.LocalScript 
+	local script = Instance.new('LocalScript', Infintejump)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/INFINITE/main/Infintejump"))();
+	end)
+end
+coroutine.wrap(RIYDQO_fake_script)()
+local function XLOKE_fake_script() -- SPAMCHAT_3.LocalScript 
+	local script = Instance.new('LocalScript', SPAMCHAT_3)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://github.com/ODI24/INFINITE/blob/main/Bodyesp"))();
+	end)
+end
+coroutine.wrap(XLOKE_fake_script)()
+local function FVRPMBY_fake_script() -- SPAMCHAT_4.LocalScript 
+	local script = Instance.new('LocalScript', SPAMCHAT_4)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/INFINITE/main/Reviz%20Admin"))();
+	end)
+end
+coroutine.wrap(FVRPMBY_fake_script)()
+local function YJJEFRI_fake_script() -- SPAMCHAT_5.LocalScript 
+	local script = Instance.new('LocalScript', SPAMCHAT_5)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/INFINITE/main/INFITE1"))();
+	end)
+end
+coroutine.wrap(YJJEFRI_fake_script)()
+local function LGTIJMS_fake_script() -- SPAMCHAT_6.LocalScript 
+	local script = Instance.new('LocalScript', SPAMCHAT_6)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/INFINITE/main/INFINITE3"))();
+	end)
+end
+coroutine.wrap(LGTIJMS_fake_script)()
+local function ERLM_fake_script() -- DANCES.Animated Rainbow Script 
+	local script = Instance.new('LocalScript', DANCES)
+
+	local RS = game:GetService("RunService")
+	
+	local rainbow = script.Parent  -- GUI object
+	local grad = script.Parent["Animated Rainbow"]
+	
+	local counter = 0       -- phase shift 
+	local w = math.pi / 12  -- frequency 
+	local CS = {}           -- colorsequence table
+	local num = 15 			-- number of colorsequence points (maxed at 15 or 16 I believe)
+	local frames = 0		-- frame counter, used to buffer if you want lower framerate updates
+	
+	RS.Heartbeat:Connect(function()
+		if math.fmod(frames, 2) == 0 then
+			for i = 0, num do
+				local c = Color3.fromRGB(127 * math.sin(w*i + counter) + 128, 127 * math.sin(w*i + 2 * math.pi/3 + counter) + 128, 127*math.sin(w*i + 4*math.pi/3 + counter) + 128)
+				table.insert(CS, i+1, ColorSequenceKeypoint.new(i/num, c))
+			end
+			grad.Color = ColorSequence.new(CS)
+			CS = {}
+			counter = counter + math.pi/40
+			if (counter >= math.pi * 2) then
+				counter = 0
+			end
+		end
+		if frames >= 1000 then
+			frames = 0
+		end
+		frames = frames + 1
+	end)
+end
+coroutine.wrap(ERLM_fake_script)()
+local function NHZU_fake_script() -- SPAMCHAT_7.LocalScript 
+	local script = Instance.new('LocalScript', SPAMCHAT_7)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/INFINITE/main/MINERAL%20ESP"))();
+	end)
+end
+coroutine.wrap(NHZU_fake_script)()
+local function TPWRN_fake_script() -- GAMESENSE.LocalScript 
+	local script = Instance.new('LocalScript', GAMESENSE)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/INFINITE/main/GAME%20SENSE"))();
+	end)
+end
+coroutine.wrap(TPWRN_fake_script)()
+local function SPBRNX_fake_script() -- FPSGUI.LocalScript 
+	local script = Instance.new('LocalScript', FPSGUI)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/INFINITE/main/FPS%20HACKS"))();
+	end)
+end
+coroutine.wrap(SPBRNX_fake_script)()
+local function WDAE_fake_script() -- INVISIBLE.LocalScript 
+	local script = Instance.new('LocalScript', INVISIBLE)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/----KIKLL---/main/*--**-"))();
+	end)
+end
+coroutine.wrap(WDAE_fake_script)()
+local function LIJKXY_fake_script() -- LOGGS.LocalScript 
+	local script = Instance.new('LocalScript', LOGGS)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/--LOGGS---/main/LOGGS"))();
+	end)
+end
+coroutine.wrap(LIJKXY_fake_script)()
+local function SBZTJ_fake_script() -- ANTIAFK.LocalScript 
+	local script = Instance.new('LocalScript', ANTIAFK)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/----AFK----/main/AFKK"))();
+	end)
+	
+end
+coroutine.wrap(SBZTJ_fake_script)()
+local function TJUFGS_fake_script() -- FPS.LocalScript 
+	local script = Instance.new('LocalScript', FPS)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/-----FPS-----/main/PFS*--*"))();
+	end)
+end
+coroutine.wrap(TJUFGS_fake_script)()
+local function CJYQ_fake_script() -- BYPASS.LocalScript 
+	local script = Instance.new('LocalScript', BYPASS)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/INFINITE/main/SPEED"))();
+	end)
+	
+end
+coroutine.wrap(CJYQ_fake_script)()
+local function YHRHDC_fake_script() -- FULLBRIGHT.LocalScript 
+	local script = Instance.new('LocalScript', FULLBRIGHT)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ODI24/BRIGHT/main/FULL"))();
+	end)
+end
+coroutine.wrap(YHRHDC_fake_script)()
+local function LCED_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		
+		game.Workspace.CurrentCamera.FieldOfView  = 90
+		
+	end)
+end
+coroutine.wrap(LCED_fake_script)()
+local function OVFUCH_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		
+		game.Workspace.CurrentCamera.FieldOfView  = 100
+		
+	end)
+end
+coroutine.wrap(OVFUCH_fake_script)()
+local function GTUHLW_fake_script() -- TextLabel_3.Animated Rainbow Script 
+	local script = Instance.new('LocalScript', TextLabel_3)
+
+	local RS = game:GetService("RunService")
+	
+	local rainbow = script.Parent  -- GUI object
+	local grad = script.Parent["Animated Rainbow"]
+	
+	local counter = 0       -- phase shift 
+	local w = math.pi / 12  -- frequency 
+	local CS = {}           -- colorsequence table
+	local num = 15 			-- number of colorsequence points (maxed at 15 or 16 I believe)
+	local frames = 0		-- frame counter, used to buffer if you want lower framerate updates
+	
+	RS.Heartbeat:Connect(function()
+		if math.fmod(frames, 2) == 0 then
+			for i = 0, num do
+				local c = Color3.fromRGB(127 * math.sin(w*i - counter) + 128, 127 * math.sin(w*i + 2 * math.pi/3 - counter) + 128, 127*math.sin(w*i + 4*math.pi/3 - counter) + 128)
+				table.insert(CS, i+1, ColorSequenceKeypoint.new(i/num, c))
+			end
+			grad.Color = ColorSequence.new(CS)
+			CS = {}
+			counter = counter + math.pi/40
+			if (counter >= math.pi * 2) then
+				counter = 0
+			end
+		end
+		if frames >= 1000 then
+			frames = 0
+		end
+		frames = frames + 1
+	end)
+end
+coroutine.wrap(GTUHLW_fake_script)()
+local function WHPT_fake_script() -- TextButton_3.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_3)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		
+		game.Workspace.CurrentCamera.FieldOfView  = 120
+		
+	end)
+end
+coroutine.wrap(WHPT_fake_script)()
+local function TQFJZNZ_fake_script() -- Volver.LocalScript 
+	local script = Instance.new('LocalScript', Volver)
+
+	local frame = script.Parent.Parent.Frame
+	local optionsframe = script.Parent.Parent.OptionsF
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Visible = false
+		if script.Parent.Visible == false then
+			frame:TweenPosition(UDim2.new(0, 0, 0, 0, "Out", "Bounce", 1))
+				end
+	end)
+end
+coroutine.wrap(TQFJZNZ_fake_script)()
+local function IXFRI_fake_script() -- Backgound.LocalScript 
+	local script = Instance.new('LocalScript', Backgound)
+
+	local Drag = script.Parent.Parent.Backgound
+	gsCoreGui = game:GetService("CoreGui")
+	gsTween = game:GetService("TweenService")
+	local UserInputService = game:GetService("UserInputService")
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	local function update(input)
+		local delta = input.Position - dragStart
+		local dragTime = 0.04
+		local SmoothDrag = {}
+		SmoothDrag.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		local dragSmoothFunction = gsTween:Create(Drag, TweenInfo.new(dragTime, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), SmoothDrag)
+		dragSmoothFunction:Play()
+	end
+	Drag.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = Drag.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	Drag.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging and Drag.Size then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(IXFRI_fake_script)()
+local function TRMISX_fake_script() -- Backgound.LocalScript 
+	local script = Instance.new('LocalScript', Backgound)
+
+	local lastTime = tick()
+	local textLabel = script.Parent.FPS
+	local runservice = game:GetService("RunService")
+	local display = true
+	
+	function waiter()
+		wait(1)
+		display = true
+	end
+	
+	runservice.RenderStepped:connect(function()
+		local fps = math.floor(.5+(1/(tick()-lastTime)))
+		if display then
+			textLabel.Text = fps
+			display = false
+			coroutine.resume(coroutine.create(waiter))
+		end
+		lastTime = tick()		
+	end)
+end
+coroutine.wrap(TRMISX_fake_script)()
+local function GCTAHO_fake_script() -- ADMINPANEL.Animated Rainbow Script 
+	local script = Instance.new('LocalScript', ADMINPANEL)
+
+	local RS = game:GetService("RunService")
+	
+	local rainbow = script.Parent  -- GUI object
+	local grad = script.Parent["Animated Rainbow"]
+	
+	local counter = 0       -- phase shift 
+	local w = math.pi / 12  -- frequency 
+	local CS = {}           -- colorsequence table
+	local num = 15 			-- number of colorsequence points (maxed at 15 or 16 I believe)
+	local frames = 0		-- frame counter, used to buffer if you want lower framerate updates
+	
+	RS.Heartbeat:Connect(function()
+		if math.fmod(frames, 2) == 0 then
+			for i = 0, num do
+				local c = Color3.fromRGB(127 * math.sin(w*i - counter) + 128, 127 * math.sin(w*i + 2 * math.pi/3 - counter) + 128, 127*math.sin(w*i + 4*math.pi/3 - counter) + 128)
+				table.insert(CS, i+1, ColorSequenceKeypoint.new(i/num, c))
+			end
+			grad.Color = ColorSequence.new(CS)
+			CS = {}
+			counter = counter + math.pi/40
+			if (counter >= math.pi * 2) then
+				counter = 0
+			end
+		end
+		if frames >= 1000 then
+			frames = 0
+		end
+		frames = frames + 1
+	end)
+end
+coroutine.wrap(GCTAHO_fake_script)()
+local function ZDKTMNG_fake_script() -- Backgound.Script 
+	local script = Instance.new('Script', Backgound)
+
+	local Plr = game.Players.LocalPlayer
+	
+	Plr:GetMouse().KeyDown:Connect(function(K)
+		if K == "u" then
+			script.Parent.Visible = true
+		end
+	end)
+	
+	local Plr = game.Players.LocalPlayer
+	
+	Plr:GetMouse().KeyDown:Connect(function(K)
+		if K == "u" then
+			script.Parent.Visible = false
+		end
+	end)
+end
+coroutine.wrap(ZDKTMNG_fake_script)()
+local function JSAILJZ_fake_script() -- Backgound.LocalScript 
+	local script = Instance.new('LocalScript', Backgound)
+
+	--< variables
+	
+	local players = game:GetService("Players")
+	local frame = script.Parent.Frame
+	local slots = frame.slots
+	local temp = frame.Template
+	
+	local players_table = {}
+	
+	--< tween info:TweenPosition(endPosition, EasingDirection, EasingStyle, Time, Override)
+	
+	local dir = "Out"
+	local style = "Quad"
+	local dur = 0.5
+	
+	--< functions
+	
+	local function cleanup(slot)
+		
+		-- repeat wait until the slot finishes tweening
+		repeat
+			wait()
+		until slot.Position.X.Offset == 400
+		slot:Destroy()
+		
+	end
+	
+	local function remove(leaving)
+		
+		-- check if a player is leaving
+		if leaving then
+		
+			-- if so, delete dictionary entry 
+			players_table[leaving] = nil
+			-- tween player slot out
+			local slot = slots:FindFirstChild(leaving)
+			slot:TweenPosition(UDim2.new(0, 400, 0, slot.Position.Y.Offset), dir, style, dur, true)
+			
+			-- delete the slot once it finishes (coroutine)
+			local cor = coroutine.wrap(cleanup)
+			cor(slot)
+			
+		end
+	end
+	
+	local function add()
+		
+		-- loop through players
+		local chil = players:GetChildren()
+		for c = 1, #chil do
+		
+			-- check if present in dictionary
+			if players_table[chil[c].Name] == nil then
+					
+				-- add to dictionary
+				players_table[chil[c].Name] = 1
+				
+				-- create a slot in the list
+				local slot = temp:Clone()
+				
+					-- edit that slot
+					slot.Name = chil[c].Name
+					slot.Text = slot.Name
+					slot.Parent = slots
+			end
+		end
+	end
+	
+	local function adjust(leaving)
+		
+		-- add() and remove()
+		add()
+		remove(leaving)
+		
+		local count = 0
+		-- loop through players_table
+		for key, value in pairs(players_table) do
+		count = count + 1
+			-- find corresponding slots
+			local slot = slots:FindFirstChild(key)
+			
+			-- tween slot positions
+			local ypos = 30 + (25+2)*(count-1)	
+			slot:TweenPosition(UDim2.new(0, 0, 0, ypos), dir, style, dur, true)
+			
+		end			
+	end
+	
+	--< events
+	
+	-- player added event
+	players.PlayerAdded:connect(function()
+		adjust(nil)
+	end)
+	
+	-- player removing event
+	players.PlayerRemoving:connect(function(leaving)
+		adjust(leaving.Name)
+	end)
+	
+	--< setup
+	
+	adjust()
+	
+	--[[ Shiro75 ]]--
+	
+	
+	
+	
+	
+	
+	
+	
+end
+coroutine.wrap(JSAILJZ_fake_script)()
+local function KSXWU_fake_script() -- PLAYER.Animated Rainbow Script 
+	local script = Instance.new('LocalScript', PLAYER)
+
+	local RS = game:GetService("RunService")
+	
+	local rainbow = script.Parent  -- GUI object
+	local grad = script.Parent["Animated Rainbow"]
+	
+	local counter = 0       -- phase shift 
+	local w = math.pi / 12  -- frequency 
+	local CS = {}           -- colorsequence table
+	local num = 15 			-- number of colorsequence points (maxed at 15 or 16 I believe)
+	local frames = 0		-- frame counter, used to buffer if you want lower framerate updates
+	
+	RS.Heartbeat:Connect(function()
+		if math.fmod(frames, 2) == 0 then
+			for i = 0, num do
+				local c = Color3.fromRGB(127 * math.sin(w*i - counter) + 128, 127 * math.sin(w*i + 2 * math.pi/3 - counter) + 128, 127*math.sin(w*i + 4*math.pi/3 - counter) + 128)
+				table.insert(CS, i+1, ColorSequenceKeypoint.new(i/num, c))
+			end
+			grad.Color = ColorSequence.new(CS)
+			CS = {}
+			counter = counter + math.pi/40
+			if (counter >= math.pi * 2) then
+				counter = 0
+			end
+		end
+		if frames >= 1000 then
+			frames = 0
+		end
+		frames = frames + 1
+	end)
+end
+coroutine.wrap(KSXWU_fake_script)()
+local function AYWEG_fake_script() -- ImageLabel.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	
+	local userId = player.UserId
+	local thumbType = Enum.ThumbnailType.HeadShot
+	local thumbSize = Enum.ThumbnailSize.Size180x180
+	local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+	local imageLabel = script.Parent
+	imageLabel.Image = content
+	imageLabel.Size = UDim2.new(0, 93, 0, 90)  
+	
+	print("Loaded!")
+end
+coroutine.wrap(AYWEG_fake_script)()
